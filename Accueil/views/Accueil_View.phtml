@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>La Cuisine Du Monde</title>
+        <link rel="stylesheet" href="Accueil/styles.css">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+        <!-- <script src="header.js"></script> -->
+    </head>
+    <body>
+    
+       <header class="header2">
+           <div class="wrapper">
+               <div class="logo">La Cuisine Du Monde</div>
+               <nav>
+                   <a href="">Categories</a>
+                   <a href="">Mon Espace Personnel</a>
+                   <a href="">Notifications</a>
+                   <a href="">Conectarse</a>
+               </nav>
+           </div>
+       </header>
+       
+        
+        <div class="image">
+   
+            <div class="search-box">
+                <input type="text" class="search-txt" placeholder="Recette à chercher">
+                <a href="#" class="search-btn">
+                <i class="fas fa-search"></i>   
+                </a>
+
+            </div>
+               
+            
+        </div>
+        
+        <?php
+            echo '<div class="Recette-petit center" >
+           <a href="Recette/RecetteNouveau.html">
+               <img class="image-petit" src="Accueil/image-petit.jpg">
+           </a>
+            <h3 class="title">'. $Recette1->getTitre() .'</h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation '. $Recette1->getTemps() .'min</h4>
+            </br>
+            <h4 class="Ingredients">
+                Ingredients : </br>
+            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
+            * 80 g de sucre en poudre</br>
+            * 8 g de sel ...</br></h4>
+            <h4 class="description">'. $Recette1->getDescription() .'</h4>
+        </div>';
+        
+        echo '<div class="Recette-petit center" >
+           <a href="Recette/RecetteNouveau.html">
+               <img class="image-petit" src="Accueil/image-petit.jpg">
+           </a>
+            <h3 class="title">'. $Recette2->getTitre() .'</h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation '. $Recette2->getTemps() .'min</h4>
+            </br>
+            <h4 class="Ingredients">
+                Ingredients : </br>
+            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
+            * 80 g de sucre en poudre</br>
+            * 8 g de sel ...</br></h4>
+            <h4 class="description">'. $Recette2->getDescription() .'</h4>
+        </div>';
+        
+        echo '<div class="Recette-petit center" >
+           <a href="Recette/RecetteNouveau.html">
+               <img class="image-petit" src="Accueil/image-petit.jpg">
+           </a>
+            <h3 class="title">'. $Recette3->getTitre() .'</h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation '. $Recette3->getTemps() .'min</h4>
+            </br>
+            <h4 class="Ingredients">
+                Ingredients : </br>
+            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
+            * 80 g de sucre en poudre</br>
+            * 8 g de sel ...</br></h4>
+            <h4 class="description">'. $Recette3->getDescription() .'</h4>
+        </div>';
+        
+        echo '<div class="Recette-petit center" >
+           <a href="Recette/RecetteNouveau.html">
+               <img class="image-petit" src="Accueil/image-petit.jpg">
+           </a>
+            <h3 class="title">'. $Recette4->getTitre() .'</h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation '. $Recette4->getTemps() .'min</h4>
+            </br>
+            <h4 class="Ingredients">
+                Ingredients : </br>
+            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
+            * 80 g de sucre en poudre</br>
+            * 8 g de sel ...</br></h4>
+            <h4 class="description">'. $Recette4->getDescription() .'</h4>
+        </div>';
+        
+        echo '<div class="Recette-petit center" >
+           <a href="Recette/RecetteNouveau.html">
+               <img class="image-petit" src="Accueil/image-petit.jpg">
+           </a>
+            <h3 class="title">'. $Recette5->getTitre() .'</h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation '. $Recette5->getTemps() .'min</h4>
+            </br>
+            <h4 class="Ingredients">
+                Ingredients : </br>
+            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
+            * 80 g de sucre en poudre</br>
+            * 8 g de sel ...</br></h4>
+            <h4 class="description">'. $Recette5->getDescription() .'</h4>
+        </div>';
+        
+        echo '<div class="Recette-petit center" >
+           <a href="Recette/RecetteNouveau.html">
+               <img class="image-petit" src="Accueil/image-petit.jpg">
+           </a>
+            <h3 class="title">'. $Recette6->getTitre() .'</h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation '. $Recette6->getTemps() .'min</h4>
+            </br>
+            <h4 class="Ingredients">
+                Ingredients : </br>
+            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
+            * 80 g de sucre en poudre</br>
+            * 8 g de sel ...</br></h4>
+            <h4 class="description">'. $Recette6->getDescription() .'</h4>
+        </div>';
+        ?>
+        
+        
+       
+  
+    </body>
+</html>
