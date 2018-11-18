@@ -32,28 +32,28 @@ li
 {
 	color : #0074B9;
 	font-size:36px;
-	padding-left:60px;
+	padding-left:8%;
 	
 }
 #noteRec
 {
 	font-size:30px;
-	padding-left:280px;
+	padding-left:20%;
 }
 #typeRec
 {
 	font-size:25px;
-	padding-left:300px;
+	padding-left:20%;
 }
 #nbPrsRec
 {
 	font-size:20px;
-	padding-left:80px;
+	padding-left:10%;
 }
 #tempsRec
 {
 	font-size:20px;
-	padding-left:700px;
+	padding-left:40%;
 }
 
 
@@ -62,20 +62,19 @@ li
 }
 .ImageRecette img {
     float:left;
-	margin-top:20px;
-    margin-left: 140px;
+	margin-top:1%;
+    margin-left: 10%;
     width:30%;
 }
 #pub
 {
 	font-size:13px;
-	
-	padding-left:120px;
+	padding-left:20%;
 }
 #decription
 {
-	padding-left:130px;
-	padding-right:130px;
+	padding-left:15%;
+	padding-right:15%;
 	
 }
 #contenaire

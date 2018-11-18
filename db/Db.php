@@ -15,7 +15,7 @@ class Db{
         }
         $conn->query("SET NAMES 'utf8'");
 
-        //echo "Connected successfully.";
+        "Connected successfully.";
         //mysqli_close($conn);
         return $conn;
     }

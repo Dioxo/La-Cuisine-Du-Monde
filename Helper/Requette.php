@@ -7,6 +7,7 @@ class Requette{
     private $Contient;
     
     public function __construct() {
+        require_once 'db/Db.php';
         $this->db = Db::connecter();
         $this->Recette = array();
     }
@@ -14,7 +15,6 @@ class Requette{
     
     //Chercher recette par index
     public function getRecette($numRecette){
-        
         require_once('db/Db.php');
         //echo 'hi' . $this->Recette;
         $sql = "SELECT Titre, Description, Temps, NbPersonne, Origine, Arome, Fete, Auteur, Gout FROM recette WHERE numRecette = " .$numRecette;
@@ -64,6 +64,8 @@ class Requette{
             echo 'no hay resultados';
         }
     }
+    
+    //AJOUTER FLORIAN
     
 }
 
