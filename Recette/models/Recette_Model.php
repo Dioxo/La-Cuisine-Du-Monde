@@ -4,9 +4,9 @@ class Recette_Model{
     
     private $Recette;
     
-    public function __construct(){        
+    public function __construct($numRecette){      
         require_once 'Objets/Recette.php';
-        $this->Recette = new Recette(1);
+        $this->Recette = new Recette($numRecette);
     }
     
     function getRecette() {
