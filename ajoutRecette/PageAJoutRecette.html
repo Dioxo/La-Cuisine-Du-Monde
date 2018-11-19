@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+	<head>
+        <meta charset="UTF-8">
+        <title>La Cuisine Du Monde</title>
+        <link rel="stylesheet" href="PageAjoutRecette.css">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+        <!-- <script src="header.js"></script> -->
+    </head>
+	
+	
+	<body>
+	<div class = header>
+	<header class="header2">
+           <div class="wrapper">
+               <div class="logo">La Cuisine Du Monde</div>
+				<nav>
+                   <a href="">Categories</a>
+                   <a href="">Mon Espace Personnel</a>
+                   <a href="">Notifications</a>
+                   <a href="">Connexion</a>
+               </nav>
+           </div>
+       </header>
+	  </div>
+	  
+	  <div class = "Formulaire">
+	   
+		<p id = "ajouterrec">Ajouter une recette : </p>
+	   
+	   <div id ="recette">
+			<form class ="recettes">
+			<label for="pseudo">* Recette | </label>
+			<input type="radio" name="media" > Publique
+			<input type="radio" name="media" > Privée
+			</form>
+	   </div>
+		
+
+		<div id = "title">
+			<form>
+		   <label for="titles">* Titre |</label>
+		   <input type="text" style= width:350px  />
+		   </form>
+	   </div>
+	   
+	   <div id="type">
+		   <form>
+		   <label for="types">* Type |</label>
+		   <input type="text" style= width:350px />
+		   </form>
+	   </div>
+ 
+	   <div id ="time">
+			   <form>
+			   <label for="times">* Temps Préparation |</label>
+			   <input type="text"  style= width:350px />
+				</form>
+		</div>
+		
+		<div id ="nombreprs">
+			<form>
+			   <label for="times">* Nombre de personnes |</label>
+			   <input type="text" style= width:350px />
+			</form>
+		</div>
+		
+		<div id ="description">
+			<form action="">
+			<p>* Description | </p>
+			<textarea rows ="15" cols ="95"></textarea>
+			</form>
+		</div>
+		<div id ="joindre">
+			Joindre des fichiers | 
+			<img id="imgjoindre" src="imageJoindre.png" />
+			
+		</div>
+		
+		
+		<div id ="finpage">
+			
+			<div id ="champsrequis">
+				* Champs requis
+			</div>
+			
+		<div = "boutonfin">
+				<input id = "Ajouter"
+			   type="button"
+		   value="Ajouter">
+		 </div>
+		 
+		 </div>
