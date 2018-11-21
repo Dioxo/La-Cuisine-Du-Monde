@@ -1,4 +1,6 @@
 <?php
+require_once("header.html");
+
 require_once('Recette/controllers/Recette_Controller.php');
 $controller = new Recette_Controller();
 //echo $_GET['numRecette'];

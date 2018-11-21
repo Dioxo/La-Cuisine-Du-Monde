@@ -1,6 +1,4 @@
-<code type="css">
-
-/*partie entete*/
+    
 #nav{
 	background_color : #023B5C;
 }
@@ -81,8 +79,4 @@ li
 {
 	font-family:  Courier New,Helvetica, cursive,serif;
 	background: white url(Background.png) no-repeat 50% 50%;
-}
-nav{
-	background-color : #023B5C;
-
 }
