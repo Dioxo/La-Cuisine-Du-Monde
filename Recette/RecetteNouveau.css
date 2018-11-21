@@ -56,27 +56,40 @@ li
 
 
 .ImageRecette  {
-    overflow:auto;
+    padding-right:30%;
+	padding-top:1%;
 }
 .ImageRecette img {
     float:left;
 	margin-top:1%;
-    margin-left: 10%;
-    width:30%;
+    margin-left: 2%;
+	width:18%;
 }
 #pub
 {
 	font-size:13px;
-	padding-left:20%;
+	padding-left:1%;
 }
 #decription
 {
-	padding-left:15%;
-	padding-right:15%;
+	
+	padding-right:25%;
 	
 }
 #contenaire
 {
 	font-family:  Courier New,Helvetica, cursive,serif;
-	background: white url(Background.png) no-repeat 50% 50%;
+	background: white url(Background.png) no-repeat ;
+	width : 150%;
+	margin-left:15%;
 }
+.descript
+{
+	text-align:left;
+	padding-top:0.5%;
+	padding-left:5%;
+	padding-right:57%;
+	
+	
+}
+
