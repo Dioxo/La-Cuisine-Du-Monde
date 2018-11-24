@@ -1,24 +1,20 @@
 <?php
 
 class Recette_Model{
+    
+    private $Recette;
+    
+    public function __construct($numRecette){      
+        require_once 'Objets/Recette.php';
+        $this->Recette = new Recette($numRecette);
+    }
+    
+    function getRecette() {
+        return $this->Recette;
+    }
 
-    private $Requette;
-    public function __construct()
-    {
-    require_once 'db/Db.php';
-    require_once 'Helper/Requette.php';
-    $this->db = Db::connecter();
-    $this->Recette = array();
+    function setRecette($Recette) {
+        $this->Recette = $Recette;
     }
-    
-    public function ajouterRecette()
-    {
-        require_once 'Helper/Requette.php';
-        $this->Requette = new Requette();
-        
-        
-        
-    }
-    
     
 }
