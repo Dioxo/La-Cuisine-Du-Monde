@@ -49,6 +49,8 @@ class Requette{
         }
                 
         
+        $this->db->close();
+        return $this->Recette;
         
     }
     
@@ -63,8 +65,36 @@ class Requette{
         }else{
             echo 'Erreur pas de resultat ';
         }
+        
+        
+        $this->db->close();
+        return $this->Recette;
+    }        
+
+
+    
+    public function creerUtilisateur($utilisateur){
+        //echo 'chercher personnes';
+        require_once('db/Db.php');
+        //echo $utilisateur;
+        
+        
+        
+        
+        $sql = "INSERT INTO utilisateur (Pseudo, Mdp, Genre, Email) VALUES ('".$utilisateur->getPseudo()."','".$utilisateur->getMdp()."','".$utilisateur->getGenre()."','".$utilisateur->getEmail()."')";
+
+        //$sql = "INSERT INTO utilisateur(Pseudo, Mdp, Genre, Email) VALUES ('z','m','m','z')";
+
+        
+        if ($this->db->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $this->db->error;
+        }
+        
     }
     
+
     //AJOUTER une recette
     public function ajouterRecette($Recette)
     {
