@@ -1,5 +1,6 @@
 <?php
-class Recette_Controller{
+
+class AjoutRecette_Controller{
     private $Recette;
     public function afficherAjoutRecette(){
         require_once ('ajoutRecette/View/AjoutRecette_View.phtml');
@@ -14,6 +15,10 @@ class Recette_Controller{
        // $_GET['bouton'];
   
     }
+    
+    
+    
+}
     
     
     

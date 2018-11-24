@@ -29,7 +29,7 @@ class Requette{
                 }*/
             }
         }else{
-            echo 'no hay resultados';
+            echo 'il ny a pas de resultats';
         }
         
         $this->db->close();
@@ -45,7 +45,7 @@ class Requette{
                 $this->Type[] = $row;
                  }
         }else{
-            echo 'no hay resultados';
+            echo 'Error 404 Pas de resultats trouvés';
         }
                 
         
@@ -61,11 +61,16 @@ class Requette{
                 $this->Contient[] = $row;
                  }
         }else{
-            echo 'no hay resultados';
+            echo 'Erreur pas de resultat ';
         }
     }
     
-    //AJOUTER FLORIAN
+    //AJOUTER une recette
+    public function ajouterRecette($Recette)
+    {
+        $sql="INSERT INTO recette VALUES ('$Recette->getTitre()','NULL','NULL','$Recette->getDescription()','$Recette->getTemps()','$Recette->getNb_De_Personne()','NULL','NULL','NULL','NULL','NULL') ";
+        
+    }
     
 }
 
