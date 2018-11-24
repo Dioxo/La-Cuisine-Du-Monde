@@ -63,7 +63,7 @@ li
     float:left;
 	margin-top:1%;
     margin-left: 2%;
-	width:18%;
+	width:40%;
 }
 #pub
 {
@@ -80,7 +80,6 @@ li
 {
 	font-family:  Courier New,Helvetica, cursive,serif;
 	background: white url(Background.png) no-repeat ;
-	width : 150%;
 	margin-left:15%;
 }
 .descript
@@ -88,7 +87,7 @@ li
 	text-align:left;
 	padding-top:0.5%;
 	padding-left:5%;
-	padding-right:57%;
+	padding-right:30%;
 	
 	
 }

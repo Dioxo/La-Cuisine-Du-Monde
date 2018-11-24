@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/LaCuisine/Accueil/models/Accueil_Model.php</file>
-            <file>file:/C:/xampp/htdocs/LaCuisine/Accueil/views/Accueil_View.phtml</file>
-            <file>file:/C:/xampp/htdocs/LaCuisine/Accueil/controllers/Accueil_Controller.php</file>
+            <file>file:/opt/lampp/htdocs/LaCuisine/Recette/RecetteNouveau.css</file>
+            <file>file:/opt/lampp/htdocs/LaCuisine/recette.php</file>
+            <file>file:/opt/lampp/htdocs/LaCuisine/Recette/views/Recette_View.phtml</file>
         </group>
     </open-files>
 </project-private>
