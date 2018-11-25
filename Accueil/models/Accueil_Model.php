@@ -19,7 +19,8 @@ class Accueil_Model
         $this->Recette6 = $this->chercherRecette(2);
     }
     public function chercherRecette($numRecette){
-        $Recette = new Recette($numRecette);
+        $Recette = new Recette();
+        $Recette->creerRecette($numRecette);
         return $Recette;
     }
     

@@ -6,7 +6,8 @@ class Recette_Model{
     
     public function __construct($numRecette){      
         require_once 'Objets/Recette.php';
-        $this->Recette = new Recette($numRecette);
+        $this->Recette = new Recette();
+        $this->Recette->creerRecette($numRecette);
     }
     
     function getRecette() {

@@ -13,8 +13,8 @@
 	
 	<body>
 	  
-	  <div class = "Formulaire">
-	   <form >
+        <div class = "Formulaire">
+	   <form action="ajout.php?action=creerRecette" method="post">
 		<p id = "ajouterrec">Ajouter une recette : </p>
 	   
 	   <div id ="recette">
@@ -37,10 +37,8 @@
 	   </div>
  
 	   <div id ="time">
-			   <form>
 			   <label for="times">* Temps Préparation |</label>
 			   <input type="text"  style= width:350px name = "timer"/>
-				</form>
 		</div>
 		
 		<div id ="nombreprs">
@@ -65,11 +63,15 @@
 				* Champs requis
 			</div>
 			
-		<div = "boutonfin">
+		<div id = "boutonfin">
 				<input id = "Ajouter"
-			   type="button"
-		   value="Ajouter"
-            name="bouton">
+			   type="submit"
+		   value="Ajouter">
 		 </div>
-            </form>
 		 </div>
+		  </form>
+
+		</div> 
+		    
+	</body>    
+	

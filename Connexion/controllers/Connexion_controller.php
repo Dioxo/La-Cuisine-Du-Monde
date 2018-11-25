@@ -24,19 +24,14 @@
                 setcookie("NomUser", $value, 0, "/");
                 echo "<script type='text/javascript'>
                 alert('Bienvenue');
-                document.location.replace('Index.php');
+                document.location.replace('Index.php?action=showRecettes');
                 </script>";               
                 
             } else{   
                 echo "<script type='text/javascript'>
                 alert('Le mot de passe ou le Login est incorrect');
                 document.location.replace('connexion.php?action=showConnection');
-                
-                
                 </script>";
-
-                
-            
             }
             
             
