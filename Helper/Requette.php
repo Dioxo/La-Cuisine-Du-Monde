@@ -102,6 +102,25 @@ class Requette{
         
     }
     
+    public function confirmerUtilisateur($username, $password){
+       
+        $boolean = false;
+        require_once('db/Db.php');        
+        
+        //SELECT Mdp, Email from utilisateur where Mdp = 'zozor' AND Email = 'zozor@g.com'
+
+        
+        $sql = "SELECT Mdp, Email from utilisateur where Mdp ='".$password ."' AND Email ='" .$username."'";
+        $result = $this->db->query($sql) ;
+        if($result->num_rows>0){
+            $boolean = true;
+        }
+        $this->db->close();
+        return $boolean;
+        
+    }
+    
+    
 }
 
 
