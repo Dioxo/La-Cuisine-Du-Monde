@@ -76,3 +76,34 @@ ul, ol {
 .nav li:hover > ul {
     display:block;
 }
+.barrechercher
+{
+   
+    display:inline-block;
+      margin-left: 10%;
+    margin-top: 2.5%;
+}
+.recetterecher
+{
+   width: 300px;
+    height: 25px;
+
+}
+#bouttonvalider
+{
+    width: 25px;
+    height: 25px;
+    
+     border:none;
+    background: url(boutonrecherche.png);
+    margin: 0 0 0 0;
+
+}
+.nomutil
+{
+    color: white;
+    font-size:15px;
+	font-weight:bold;
+    padding-left:20px;
+    
+}
