@@ -11,7 +11,7 @@
 	background-attachment:fixed;
 	background-repeat:no-repeat;
 	background-position:50% 50%;
-	border-radius: 20%;
+    border-radius: 10px 10px 10px 10px;
 }
 #genre 
 {
@@ -27,7 +27,7 @@
 	letter-spacing: 2px; 
 	padding-left:3%;
 	padding-top:0.7%;
-	border-radius: 20%;
+    border-radius: 10px 10px 10px 10px;
 }
 
 #pseudo
@@ -43,8 +43,7 @@
 	letter-spacing: 2px; 
 	padding-left:3%;
 	padding-top:0.7%;
-	border-radius: 20%;
-	
+    border-radius: 10px 10px 10px 10px;	
 		
 }
 #pass
@@ -60,7 +59,7 @@
 	letter-spacing: 2px; 
 	padding-left:3%;
 	padding-top:0.7%;
-	border-radius: 20%;
+    border-radius: 10px 10px 10px 10px;
 }
 #confirmpass
 {
@@ -75,7 +74,7 @@
 	letter-spacing: 2px; 
 	padding-left:3%;
 	padding-top:0.7%;
-	border-radius: 20%;
+    border-radius: 10px 10px 10px 10px;
 }
 #admail
 {
@@ -90,7 +89,7 @@
 	letter-spacing: 2px; 
 	padding-left:3%;
 	padding-top:0.7%;
-	border-radius: 20%;
+    border-radius: 10px 10px 10px 10px;
 }
 #commentaire
 {
@@ -105,7 +104,7 @@
 	letter-spacing: 2px; 
 	padding-left:3%;
 	padding-top:0.7%;
-	border-radius: 20%;
+    border-radius: 10px 10px 10px 10px;
 }
 
 #confidentialite
@@ -113,8 +112,8 @@
 	margin-top:7%;
 	padding-right:20%;
 	background-color:#D6D6D6;
-	border-radius: 20%;
-	height:90px;
+    border-radius: 10px 10px 10px 10px;	
+    height:90px;
 	width: 70%;   /* Permet d'ajuster la largeur du champ de saisie à 70% */
 	box-sizing: border-box;  
 	font-family: Lato;   /* Police du texte */
@@ -148,11 +147,12 @@ input
 }
 #champsrequis
 {
-	margin-top:20%;
+
+	margin-top:7%;
 	background-color:#D6D6D6;
 	height:30px;
 	width: 13%;   
 	text-align:center;
-	border-radius: 20%;
+border-radius: 10px 10px 10px 10px;
 }
 
