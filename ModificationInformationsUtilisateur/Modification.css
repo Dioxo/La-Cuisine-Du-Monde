@@ -12,12 +12,14 @@ body
     width: 70%;
     margin-left: 15%;
     border-radius: 50px 50px 50px 50px;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
     padding-bottom: 3%;
+    padding-top: 1.5%;
+    margin-top: 5%;
 }
 #ancienpass
 {
-	margin-top:4%;
+	margin-top:1%;
 	word-spacing:3px;
 	box-sizing: border-box;  
 	font-size: 20px;   /* Taille de la police du texte */
@@ -40,8 +42,68 @@ body
 	padding-top:0.7%;
 	border-radius: 20%;
 }
+.passp,.mail
+{
+    margin-left: 17.3%;
+    width: 300px;
+    height: 20px;
+    border-radius: 10px 10px 10px 10px;
+    border: 0px;
+}
+.confirpass,.confirmail
+{
+    margin-left: 4%;
+    width: 300px;
+    height: 20px;
+    border-radius: 10px 10px 10px 10px;
+    border: 0px;
+}
 #confidentialite
 {
-    
+    padding-right:20%;
+	background-color:#D6D6D6;
+    border-radius: 10px 10px 10px 10px;
+    height:90px;
+	width: 70%;   /* Permet d'ajuster la largeur du champ de saisie à 70% */
+	box-sizing: border-box;  
+	font-family: Lato;   /* Police du texte */
+	font-size:10px;   /* Taille de la police du texte */
+	font-weight: normal;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	text-align:left;
+	padding-left:5%;
+	padding-top:0.7%;
+    margin-left: 15%;
 
 }
+#finpage
+{
+	display:inline;
+}
+#modifier
+{
+	margin-left:60%;
+	padding:6px 0 6px 0;
+	font:bold 20px Arial;
+	background:#478bf9;
+	color:#fff;
+	border-radius:4px;
+	width:260px;
+	border:none;
+	margin-bottom:10%
+}
+input
+{
+	margin-left:3%;
+}
+#champsrequis
+{
+    margin-left: 2%;
+	margin-top:5%;
+	background-color:#D6D6D6;
+	height:30px;
+	width: 13%;   
+	text-align:center;
+	border-radius: 10px 10px 10px 10px;
+}
+
