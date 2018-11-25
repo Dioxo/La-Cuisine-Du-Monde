@@ -36,9 +36,11 @@
                         </ul>
                     </li>
                     <li><a href="">Notifications</a></li>
-                    <li class ="nomutil">
-                        Nom utilisateur
-                    </li>
+                    <?php
+                        echo '<li class ="nomutil">
+                        '.$_COOKIE[$nom].'</li>';
+                    ?>
+                    
 			    </ul>    
                    
                </nav>

@@ -20,8 +20,8 @@
                 //on va a la page d'accueil mais on change la toolbar
                 
                 //bool setcookie ( string $name [, string $value [, int $expire = 0 [, string $path [, string $domain [, bool $secure = false [, bool $httponly = false ]]]]]] )
-                $value = 'pseudo';
-                setcookie("NomUser", $value, time()+180, "/");
+                $value = $username;
+                setcookie("NomUser", $value, 0, "/");
                 echo "<script type='text/javascript'>
                 alert('Bienvenue');
                 document.location.replace('Index.php');
@@ -36,10 +36,7 @@
                 </script>";
 
                 
-                
-                //ALLER A LA PAG D'ACCUEIL
-                //CHARGER LA COOCKIE AVEC LES VALEURS RECIBIDOS PAR POST
-                //recharger la pag d'accueil
+            
             }
             
             
