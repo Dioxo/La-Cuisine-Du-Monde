@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #C4C4C4;
+}
+.Formulaire
+{
+    background-color: #E5E5E5;
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 50px 50px 50px 50px;
+    margin-bottom: 10%;
+    padding-bottom: 3%;
+}
+#ancienpass
+{
+	margin-top:4%;
+	word-spacing:3px;
+	box-sizing: border-box;  
+	font-size: 20px;   /* Taille de la police du texte */
+	font-weight: bold;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	padding-left:10%;
+	padding-top:0.7%;
+	border-radius: 20%;
+
+}
+#nouveaupass,#nouveauconfirmpass,#admail,#nouveauadmail
+{
+	margin-top:2%;
+	word-spacing:3px;
+	box-sizing: border-box;  
+	font-size: 20px;   /* Taille de la police du texte */
+	font-weight: bold;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	padding-left:10%;
+	padding-top:0.7%;
+	border-radius: 20%;
+}
+#confidentialite
+{
+    
+
+}

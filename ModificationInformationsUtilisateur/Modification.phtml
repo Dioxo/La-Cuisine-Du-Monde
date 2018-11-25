@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+	<head>
+        <meta charset="UTF-8">
+        <title>La Cuisine Du Monde</title>
+        <link rel="stylesheet" href="Modification.css">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+        <!-- <script src="header.js"></script> -->
+    </head>
+	
+	
+	<body>
+
+	   <form action="inscription.php?action=submit" method="post">
+	      
+	   <div class = "Formulaire">
+           
+           <div id = "ancienpass">
+               <label for="pass">* Ancien mot de passe :</label>
+               <input type="password" name="pass" id="passp" />
+           </div>
+            <div id = "nouveaupass">
+               <label for="pass">Nouveau mot de passe :</label>
+               <input type="password" name="pass" id="passp" />
+           </div>
+
+           <div id="nouveauconfirmpass">
+               <label for="confirmpass">Confirmez nouveau mot de passe :</label>
+               <input type="password" name="confimpass" id="confirpass" />
+           </div>
+
+           <div id ="admail">
+                   <label for="mail">Nouvelle adresse mail :</label>
+                   <input type="email" name="mail" id="mail"  placeholder="Ex : Zozor90@hotmail.fr"  />
+            </div>
+          <div id ="nouveauadmail">
+                   <label for="mail">Confirmer nouvelle adresse mail :</label>
+                   <input type="email" name="mail" id="mail"  placeholder="Ex : Zozor90@hotmail.fr"  />
+            </div>
+
+           </div>
+            <div id ="confidentialite">
+                <input  type="checkbox" name="pfm" value="dos"><U><I> * Confidentialité des données utilisteur:</I></U><br />
+                Les informations personnelles que nous collections sont destinées a mieux répondre à vos demandes et attentes et traiter vos recherches.
+                Vous disposez à tout moment d’un droit d’accès, de modification et de suppression de vos informations personnelles que vous pouvez exercer via la page “mon espace personnel” de ce site.
+            </div>
+           
+
+            <div id ="finpage">
+
+                <div id ="champsrequis">
+                    * Champs requis
+                </div>
+
+            <div id= "boutonfin">
+                    <input id = "inscription"
+                   type="submit"
+               value="Modifier vos informations">
+             </div>
+
+             </div>
+		   
+	       
+	   </form>
+		
+	  </body>
