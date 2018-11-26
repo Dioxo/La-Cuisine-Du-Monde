@@ -8,17 +8,20 @@ class Recette{
     //private $image = 'image ';
     private $description = '';
     private $temps = '';
-    private $nb_De_Personne = '';
+    private $nb_De_Personne = 0;
     private $note = '';
     private $origine = '';
     private $arome = '';
     private $fete = '';
-    private $auteur = '';
+    private $auteur = 0;
     private $type = '';
     private $gout = '';
     
-    //Constructeur pour creer des recettes, qui prend comme parametre l'id de la recette
-    public function __construct($numRecette){
+    public function __construct(){
+        
+    }
+    
+    public function creerRecette($numRecette){
         
         //Chercher la recette dans la BDD
         require_once 'Helper/Requette.php';
@@ -54,6 +57,7 @@ class Recette{
          * 
          *          */
     }
+    
     public function getTitre() {
         return $this->titre;
     }

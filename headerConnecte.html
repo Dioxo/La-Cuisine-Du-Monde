@@ -12,7 +12,7 @@
 <body>
           <header class="">
            <div class="wrapper">
-               <a href="Index.php">
+               <a href="./Index.php?action=showRecettes">
                <div class="logo">La Cuisine Du Monde</div>
                </a>
                <div class ="barrechercher">
@@ -30,16 +30,18 @@
                     <li><a href="">Mon Espace Personnel</a>
                         <ul>
                             <li><a href="">Modifier Mes Informations</a></li>
-                            <li><a href="./ajout.php">Creer une Recette</a></li>
+                            <li><a href="./ajout.php?action=afficherAjoutRecette">Creer une Recette</a></li>
                             <li><a href="">Voir mes Recettes</a></li>
                             <li><a href="">Liste Favori</a></li>
-                            <li><a href="">Deconnexion</a></li>
+                            <li><a href="./Index.php?action=deconnecter">Deconnexion</a></li>      
                         </ul>
                     </li>
                     <li><a href="">Notifications</a></li>
-                    <li class ="nomutil">
-                        Nom utilisateur
-                    </li>
+                    <?php
+                        echo '<li class ="nomutil">
+                        '.$_COOKIE[$nom].'</li>';
+                    ?>
+                    
 			    </ul>    
                    
                </nav>

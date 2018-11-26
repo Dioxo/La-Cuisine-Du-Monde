@@ -98,9 +98,63 @@ class Requette{
     //AJOUTER une recette
     public function ajouterRecette($Recette)
     {
-        $sql="INSERT INTO recette VALUES ('$Recette->getTitre()','NULL','NULL','$Recette->getDescription()','$Recette->getTemps()','$Recette->getNb_De_Personne()','NULL','NULL','NULL','NULL','NULL') ";
+        require_once('db/Db.php');        
+        $sql="INSERT INTO recette (Titre,Description,Temps,NbPersonne,Auteur) VALUES 
+                                                    ('".$Recette->getTitre()."','".$Recette->getDescription()."','".$Recette->getTemps()."',".$Recette->getNb_De_Personne().",".$Recette->getAuteur().")";
+        
+
+        if ($this->db->query($sql)) {
+            echo  "<script type='text/javascript'>
+                alert('Nouvelle Recette Ajoutée');
+                </script>";
+        } else {
+            echo  "<script type='text/javascript'>
+                alert('Erreur, pas possible de creer la recette, essayez autre fois');
+                </script>";        }
+
+    }
+    
+    public function confirmerUtilisateur($username, $password){
+       
+        $boolean = false;
+        require_once('db/Db.php');        
+        
+        //SELECT Mdp, Email from utilisateur where Mdp = 'zozor' AND Email = 'zozor@g.com'
+
+        
+        $sql = "SELECT Mdp, Email from utilisateur where Mdp ='".$password ."' AND Email ='" .$username."'";
+        $result = $this->db->query($sql) ;
+        if($result->num_rows>0){
+            $boolean = true;
+        }
+        $this->db->close();
+        return $boolean;
         
     }
+    
+    public function getUserID(){
+        $nom = 'NomUser';
+        if(isset($_COOKIE[$nom])) {
+            
+            require_once('db/Db.php');        
+            $sql = "SELECT numUser from utilisateur where Email ='".$_COOKIE[$nom]."'";
+            $result = $this->db->query($sql) ;
+            if($result){
+            while($row = $result->fetch_assoc()) {
+                $id[] = $row;
+                 }
+            }else{
+            echo 'Erreur pas de resultat '. $this->db->error;
+            }
+
+
+            //$this->db->close();
+            return $id;   
+        }
+    }
+    
+    
+    
     
 }
 
