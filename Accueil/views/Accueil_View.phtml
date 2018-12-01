@@ -58,8 +58,17 @@
                 echo "Description :";
                 
                 ?>
-             <h4 class="description"><?php echo $Recette1->getDescription() ?></h4>
-        </div>';
+             <h4 class="description"><?php 
+                if(str_word_count($Recette1->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette1->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette1->getDescription();  
+                 }?></h4>
+        </div>
         
         
           
@@ -84,8 +93,17 @@
                 echo "Description :";
                 
                 ?>
-             <h4 class="description"><?php echo $Recette2->getDescription() ?></h4>
-        </div>';
+             <h4 class="description"><?php 
+                if(str_word_count($Recette2->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette2->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette2->getDescription();  
+                 }?></h4>
+        </div>
         
           
         <div class="Recette-petit center" >
@@ -109,8 +127,17 @@
                 echo "Description :";
                 
                 ?>
-             <h4 class="description"><?php echo $Recette3->getDescription() ?></h4>
-        </div>';
+             <h4 class="description"><?php 
+                if(str_word_count($Recette3->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette3->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette3->getDescription();  
+                 }?></h4>
+        </div>
         
           
         <div class="Recette-petit center" >
@@ -134,8 +161,17 @@
                 echo "Description :";
                 
                 ?>
-             <h4 class="description"><?php echo $Recette4->getDescription() ?></h4>
-        </div>';
+             <h4 class="description"><?php 
+                if(str_word_count($Recette4->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette4->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette4->getDescription();  
+                 }?></h4>
+        </div>
         
           
         <div class="Recette-petit center" >
@@ -159,8 +195,17 @@
                 echo "Description :";
                 
                 ?>
-             <h4 class="description"><?php echo $Recette5->getDescription() ?></h4>
-        </div>';
+             <h4 class="description"><?php 
+                if(str_word_count($Recette5->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette5->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette5->getDescription();  
+                 }?></h4>
+        </div>
         
           
         <div class="Recette-petit center" >
@@ -181,11 +226,18 @@
                     echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
                         
                 }
-                echo "Description :";
-                
-                ?>
-             <h4 class="description"><?php echo $Recette6->getDescription() ?></h4>
-        </div>';
+                echo "Description : </br>";?>
+             <h4 class="description"><?php 
+                if(str_word_count($Recette6->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette6->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette6->getDescription();  
+                 }?></h4>
+        </div>
        
   
     </body>
