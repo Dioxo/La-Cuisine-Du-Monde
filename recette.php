@@ -7,7 +7,7 @@ if(!isset($_COOKIE[$nom])) {
     //Chercher les meilleurs recettes
 } else {
     //l'utilisateur est connecte
-    require_once("headerConnete.html");
+    require_once("headerConnecte.html");
 }
 
 require_once('Recette/controllers/Recette_Controller.php');
