@@ -32,7 +32,9 @@ class Requette{
             echo 'il ny a pas de resultats';
         }
         
-        $this->db->close();
+        
+        //non fermer la connection ici, pcq dans l'objet Recette, on doit trouver la recette et aussi les ingredients, laisse fermer la requete Ingredients la connection a la BD
+        //$this->db->close();
         return $this->Recette;
     }
     
@@ -50,25 +52,25 @@ class Requette{
                 
         
         $this->db->close();
-        return $this->Recette;
+        return $this->Type;
         
     }
     
     public function getContient($numRecette){
         require_once('db/Db.php');        
-        $sql = "SELECT nomIngredient from contient as c, ingredient as i WHERE c.numRecette=".$numRecette." AND c.numIngredient=i.numIngredient";
+        $sql = "SELECT nomIngredient, Quantite from contient as c, ingredient as i WHERE c.numRecette=".$numRecette." AND c.numIngredient=i.numIngredient";
         $result = $this->db->query($sql) ;
         if($result->num_rows>0){
             while($row = $result->fetch_assoc()) {
                 $this->Contient[] = $row;
                  }
         }else{
-            echo 'Erreur pas de resultat ';
+            echo 'Erreur pas de resultats pour le numRecette = ' . $numRecette ;
         }
         
         
-        $this->db->close();
-        return $this->Recette;
+        //$this->db->close();
+        return $this->Contient;
     }        
 
 
@@ -151,6 +153,24 @@ class Requette{
             //$this->db->close();
             return $id;   
         }
+    }
+    
+    public function getAuteurByID($id){
+        
+        require_once('db/Db.php');        
+            $sql = "SELECT Pseudo from utilisateur where numUser ='".$id."'";
+            $result = $this->db->query($sql) ;
+            if($result){
+            while($row = $result->fetch_assoc()) {
+                $auteur[] = $row;
+                 }
+            }else{
+            echo 'Erreur pas de resultat '. $this->db->error;
+            }
+
+
+            //$this->db->close();
+            return $auteur;   
     }
     
     

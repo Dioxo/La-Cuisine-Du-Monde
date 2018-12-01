@@ -38,15 +38,40 @@ class Recette{
         $this->origine = $Recette[0]["Origine"];
         $this->arome = $Recette[0]["Arome"];
         $this->fete = $Recette[0]["Fete"];
-        $this->auteur = $Recette[0]["Auteur"];
+        //$this->auteur = $Recette[0]["Auteur"];
+        
+        $auteur = $Requette->getAuteurByID($Recette[0]["Auteur"]);
+        $this->auteur = $auteur[0]["Pseudo"];
+        
         $this->gout = $Recette[0]["Gout"];
         
         
         /*
         * Pour INGREDIENTS, c'est un cas particulier
         *On doit chercher dans la table Ingredients, tous les elements et le mettre dans un array 
-         //$this->ingredients = ??????;
-         * 
+         */
+        $Ingredients = $Requette->getContient($numRecette);
+        
+        //echo $Ingredients[1]["nomIngredient"];
+        for($i = 0; $i < 7 ;  $i++){
+        //echo $Ingredients[$i]["nomIngredient"];
+          //  echo "</br>";
+            array_push( $this->ingredients, $Ingredients[$i]["nomIngredient"] , $Ingredients[$i]["Quantite"] );
+
+            
+        }
+
+        // PARCOURIR TOUS LES INGREDIENTS
+        /*
+        les elements (n%2 = 0) c'est des Ingredients
+        les elements (n%2 = 1) c'est des Quantités
+        foreach($this->ingredients as $ing){
+            echo $ing;
+        }
+        */
+        
+        
+        /*
          * Pour Note, on doit chercher dans la table Note, c'est un autre requette
         //$this->note = $Recette["Titre"];     
          * 
@@ -56,6 +81,8 @@ class Recette{
 
          * 
          *          */
+        $Type = $Requette->getType($numRecette);
+        $this->type = $Type[0]["nomType"];
     }
     
     public function getTitre() {

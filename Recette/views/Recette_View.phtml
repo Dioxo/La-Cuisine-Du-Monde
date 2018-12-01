@@ -39,7 +39,7 @@
                 <h1 id ="nomRec"> <?php echo $Recette->getTitre();?></h1>
 
                 <li id = "noteRec"> Note : <?php echo $Recette->getNote();echo 'MANQUE IMPLEMENTATION';?> </li> 
-                <li id = "typeRec">Type <?php echo $Recette->getType();echo 'MANQUE IMPLEMENTATION';?></li>
+                <li id = "typeRec">Type <?php echo $Recette->getType();?></li>
                 </br>
                 <li id="nbPrsRec">Nombre personnes : <?php echo $Recette->getNb_De_Personne();?>     </li>    
                 <li id="tempsRec">Temps préparation :<?php echo $Recette->getTemps();?></li>
@@ -47,16 +47,21 @@
                 <div  id = "contenaire">
                 <p class="ImageRecette">
                     <img src="Recette/ImageRecette.png" alt="ImageRecette">
-                    
-                    <!--  
-
-                    //INGREDIENTS, IL N'EXISTE PAS LA REQUETE
-                    <?php echo $Recette->getIngredients(); echo 'MANQUE IMPLEMENTATION';?>
-
-                    -->
-                    
-                    
-                    Ingredients :</br>  - 500 g de farine (farine de gruau de préférence, sinon de la T45)</br>  - 80 g de sucre en poudre </br> - 8 g de sel</br>  - 25 g de levure fraîche </br> - 2 oeufs </br> - 180 ml de lait entier à température ambiante </br> - 100 g de beurre pommade
+                    Ingredients :</br>  
+                    <?php
+                        $Ingredients = $Recette->getIngredients();
+                        for($i = 0 ; $i < count($Ingredients) - 1; $i++){
+                            
+                            echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                            
+                        }
+                        /*foreach($Recette->getIngredients() as $ingredients){
+                            
+                            echo "- " .$ingredients;
+                            
+                        }*/
+    
+                    ?>
                 </p>
 
 
