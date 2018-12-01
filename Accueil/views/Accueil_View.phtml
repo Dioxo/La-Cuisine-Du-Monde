@@ -37,105 +37,155 @@
             
         </div>
         
-        <?php
-            echo '<div class="Recette-petit center" >
+        <div class="Recette-petit center" >
            <a href="recette.php?numRecette=1">
                <img class="image-petit" src="Accueil/image-petit.jpg">
            </a>
-            <h3 class="title">'. $Recette1->getTitre() .'</h3>   
+            <h3 class="title"><?php echo $Recette1->getTitre()?></h3>   
             <h4 class="Note">Note 4.5</h4>
-            <h4 class="Temps">Temps de preparation '. $Recette1->getTemps() .'min</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette1->getTemps() ?></h4>
             </br>
             <h4 class="Ingredients">
-                Ingredients : </br>
-            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
-            * 80 g de sucre en poudre</br>
-            * 8 g de sel ...</br></h4>
-            <h4 class="description">'. $Recette1->getDescription() .'</h4>
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette1->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php echo $Recette1->getDescription() ?></h4>
         </div>';
         
-        echo '<div class="Recette-petit center" >
-           <a href="recette.php?numRecette=2">
+        
+          
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1">
                <img class="image-petit" src="Accueil/image-petit.jpg">
            </a>
-            <h3 class="title">'. $Recette2->getTitre() .'</h3>   
+            <h3 class="title"><?php echo $Recette2->getTitre()?></h3>   
             <h4 class="Note">Note 4.5</h4>
-            <h4 class="Temps">Temps de preparation '. $Recette2->getTemps() .'min</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette2->getTemps() ?></h4>
             </br>
             <h4 class="Ingredients">
-                Ingredients : </br>
-            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
-            * 80 g de sucre en poudre</br>
-            * 8 g de sel ...</br></h4>
-            <h4 class="description">'. $Recette2->getDescription() .'</h4>
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette2->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php echo $Recette2->getDescription() ?></h4>
         </div>';
         
-        echo '<div class="Recette-petit center" >
-           <a href="Recette/RecetteNouveau.html">
+          
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1">
                <img class="image-petit" src="Accueil/image-petit.jpg">
            </a>
-            <h3 class="title">'. $Recette3->getTitre() .'</h3>   
+            <h3 class="title"><?php echo $Recette3->getTitre()?></h3>   
             <h4 class="Note">Note 4.5</h4>
-            <h4 class="Temps">Temps de preparation '. $Recette3->getTemps() .'min</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette3->getTemps() ?></h4>
             </br>
             <h4 class="Ingredients">
-                Ingredients : </br>
-            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
-            * 80 g de sucre en poudre</br>
-            * 8 g de sel ...</br></h4>
-            <h4 class="description">'. $Recette3->getDescription() .'</h4>
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette3->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php echo $Recette3->getDescription() ?></h4>
         </div>';
         
-        echo '<div class="Recette-petit center" >
-           <a href="Recette/RecetteNouveau.html">
+          
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1">
                <img class="image-petit" src="Accueil/image-petit.jpg">
            </a>
-            <h3 class="title">'. $Recette4->getTitre() .'</h3>   
+            <h3 class="title"><?php echo $Recette4->getTitre()?></h3>   
             <h4 class="Note">Note 4.5</h4>
-            <h4 class="Temps">Temps de preparation '. $Recette4->getTemps() .'min</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette4->getTemps() ?></h4>
             </br>
             <h4 class="Ingredients">
-                Ingredients : </br>
-            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
-            * 80 g de sucre en poudre</br>
-            * 8 g de sel ...</br></h4>
-            <h4 class="description">'. $Recette4->getDescription() .'</h4>
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette4->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php echo $Recette4->getDescription() ?></h4>
         </div>';
         
-        echo '<div class="Recette-petit center" >
-           <a href="Recette/RecetteNouveau.html">
+          
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1">
                <img class="image-petit" src="Accueil/image-petit.jpg">
            </a>
-            <h3 class="title">'. $Recette5->getTitre() .'</h3>   
+            <h3 class="title"><?php echo $Recette5->getTitre()?></h3>   
             <h4 class="Note">Note 4.5</h4>
-            <h4 class="Temps">Temps de preparation '. $Recette5->getTemps() .'min</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette5->getTemps() ?></h4>
             </br>
             <h4 class="Ingredients">
-                Ingredients : </br>
-            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
-            * 80 g de sucre en poudre</br>
-            * 8 g de sel ...</br></h4>
-            <h4 class="description">'. $Recette5->getDescription() .'</h4>
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette5->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php echo $Recette5->getDescription() ?></h4>
         </div>';
         
-        echo '<div class="Recette-petit center" >
-           <a href="Recette/RecetteNouveau.html">
+          
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1">
                <img class="image-petit" src="Accueil/image-petit.jpg">
            </a>
-            <h3 class="title">'. $Recette6->getTitre() .'</h3>   
+            <h3 class="title"><?php echo $Recette6->getTitre()?></h3>   
             <h4 class="Note">Note 4.5</h4>
-            <h4 class="Temps">Temps de preparation '. $Recette6->getTemps() .'min</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette6->getTemps() ?></h4>
             </br>
             <h4 class="Ingredients">
-                Ingredients : </br>
-            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)</br>
-            * 80 g de sucre en poudre</br>
-            * 8 g de sel ...</br></h4>
-            <h4 class="description">'. $Recette6->getDescription() .'</h4>
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette6->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php echo $Recette6->getDescription() ?></h4>
         </div>';
-        ?>
-        
-        
        
   
     </body>

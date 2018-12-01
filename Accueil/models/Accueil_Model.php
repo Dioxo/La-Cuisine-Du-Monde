@@ -15,8 +15,8 @@ class Accueil_Model
         $this->Recette2 = $this->chercherRecette(2);
         $this->Recette3 = $this->chercherRecette(1);
         $this->Recette4 = $this->chercherRecette(2);
-        $this->Recette5 = $this->chercherRecette(3);
-        $this->Recette6 = $this->chercherRecette(4);
+        $this->Recette5 = $this->chercherRecette(1);
+        $this->Recette6 = $this->chercherRecette(2);
     }
     public function chercherRecette($numRecette){
         $Recette = new Recette();

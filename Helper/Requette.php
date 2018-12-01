@@ -47,7 +47,7 @@ class Requette{
                 $this->Type[] = $row;
                  }
         }else{
-            echo 'Error 404 Pas de resultats trouvés';
+            //echo 'Error 404 Pas de resultats trouvés';
         }
                 
         
@@ -65,7 +65,7 @@ class Requette{
                 $this->Contient[] = $row;
                  }
         }else{
-            echo 'Erreur pas de resultats pour le numRecette = ' . $numRecette ;
+            //echo 'Erreur pas de resultats pour le numRecette = ' . $numRecette ;
         }
         
         
