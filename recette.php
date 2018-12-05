@@ -20,3 +20,5 @@ if(isset($_GET['numRecette'])){
 }else{
     echo 'La page nexiste pas';
 }
+
+require_once('Commentaire/View/Commentaire.phtml');
