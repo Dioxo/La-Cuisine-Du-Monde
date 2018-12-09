@@ -11,8 +11,10 @@
     
     
 	<body>
-	  <form>
-          <div class = "Formulaire">
+  
+      <!--   URL = 'recette.php?numRecette=#NumRECETTE&action=ajouterCommentaire'  -->
+	  <form action="<?php echo 'recette.php?numRecette='.$_GET['numRecette'].'&action=ajouterCommentaire'?>" method="post">
+           <div class = "Formulaire">
 
               <div class ="ecriture">
 
@@ -21,7 +23,7 @@
                         <img class = "image" src="./Commentaire/View/profil.jpeg">    
                   </div>
                   <div class="commentairee">
-                      <textarea rows ="5" cols ="95" class="commentaire"></textarea>
+                      <textarea name="commentaire" rows ="5" cols ="95" class="commentaire"></textarea>
                   </div>
                   <div id= "boutoncomm">
                         <input id = "comm"

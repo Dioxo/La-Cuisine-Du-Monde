@@ -173,13 +173,13 @@ class Requette{
             return $auteur;   
     }
     
-   public function ajouterCommentaire($commentaire){
+   public function ajouterCommentaire($commentaire, $numRecette, $numUser){
         require_once('db/Db.php');        
-        $numUser = getUserID();
-        $sql = "INSERT INTO commentaire(Contenu,numUser,numRecette) VALUES('".$commentaire->getCommentaire()."',".$numUser.",".$commentaire->getNumRecette().")";
+        $sql = "INSERT INTO commentaire(Contenu,numUser,numRecette) VALUES('".$commentaire."',".$numUser.",".$numRecette.")";
        if ($this->db->query($sql)) {
             echo  "<script type='text/javascript'>
                 alert('Nouveau commentaire Ajouté');
+                document.location.replace('recette.php?numRecette=1&action=afficherCommentaires');
                 </script>";
         } else {
             echo  "<script type='text/javascript'>

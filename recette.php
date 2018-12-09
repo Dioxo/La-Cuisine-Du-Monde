@@ -23,9 +23,10 @@ if(isset($_GET['numRecette'])){
 
 require_once('Commentaire/Controllers/Commentaire_Controller.php');
 $commentaireController = new Commentaire_Controller();
-if(isset($_GET['afficherCommentaires'])){
+if(isset($_GET['action'])){
+    $action = $_GET['action'];
     //$controller->afficherCommentaires($_GET['numRecette']);
-    $commentaireController->afficherCommentaires();
+    $commentaireController->$action();
     //$Recette = $Requette->getRecette($numRecette);
     
 }else{

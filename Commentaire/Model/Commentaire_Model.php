@@ -9,14 +9,11 @@ class Commentaire_Model{
         return $this->commentaires;
     }
     
-    function ajouterCommentaire(){
+    function ajouterCommentaire($commentaire, $numRecette, $user){
         require_once('./Helper/Requette.php');
-        require_once('./Objets/Commentaire.php');
         $requette = new Requette();
-        $commentaire = new Commentaire();
-        $requette->ajouterCommentaire($commentaire);
-        
-        
+        $numUser = $requette->getUserID()[0]['numUser'];
+        $requette->ajouterCommentaire($commentaire, $numRecette, $numUser);
     }
     
 }
