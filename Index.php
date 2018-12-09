@@ -19,7 +19,9 @@ if(!isset($_COOKIE[$nom])) {
     $action = $_GET['action'];
     $controller->$action();   
 }else{
-    echo ' La page n\'existe pas';
+     /*Changement de 'La page n'existe pas' 
+    par montrer la page d'accueil           */
+     $controller->showRecettes();
 }
 
 

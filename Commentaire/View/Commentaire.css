@@ -11,11 +11,13 @@
 }
 .image
 {
-    width: 10%;
+    width: 100px;
+    height: auto;    
     background-color: #0074B9;
     text-align: center;
     border-radius: 10px 10px 10px 10px;
     float: left;
+    margin-left: 10%;
 }
 .commentairee
 {
@@ -25,8 +27,6 @@
 {
    border:10px #0074B9 inset;
     border-radius: 10px 10px 10px 10px;
-   
-    
 }
 #comm
 {

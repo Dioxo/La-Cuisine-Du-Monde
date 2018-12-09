@@ -12,42 +12,67 @@
     
 	<body>
 	  <form>
-	  <div class = "Formulaire">
-         
-          <div class ="ecriture">
-                <!-- inserer l'image pour l'instant on va mettre un cadre normal 
-                    <img src=" ">-->
-              <div class = "image">
-                  photo utilisateur
+          <div class = "Formulaire">
+
+              <div class ="ecriture">
+
+                  <div >
+                         <!-- inserer l'image pour l'instant on va mettre un cadre normal -->
+                        <img class = "image" src="./Commentaire/View/profil.jpeg">    
+                  </div>
+                  <div class="commentairee">
+                      <textarea rows ="5" cols ="95" class="commentaire"></textarea>
+                  </div>
+                  <div id= "boutoncomm">
+                        <input id = "comm"
+                       type="submit"
+                   value="Commenter">
+                 </div>
               </div>
-              <div class="commentairee">
-                  <textarea rows ="5" cols ="95" class="commentaire"></textarea>
-              </div>
-              <div id= "boutoncomm">
-                    <input id = "comm"
-                   type="submit"
-               value="Commenter">
-             </div>
           </div>
+
+      </form>
+    
+          <?php
+            //Array ( [0] => Array ( [Contenu] => Contenu [Email] => alex@gmail.com ) )
+        
+            for($i = 0; $i < count($commentaires); $i++){
+                
+                
+                echo '<div class="dejaecri">
+            <div id ="exemplecom">
+                <div id="nomuti">
+                    '.$commentaires[$i]['Email'].'
+                </div>
+                <div id="photocom">
+                    <img class = "image" src="./Commentaire/View/profil.jpeg">                    </div>
+                <div id="comecri">
+                    '.$commentaires[$i]['Contenu'].'
+                </div>
+              </div>
+              
+          </div>';
+
+            }
+               
           
+          ?>
           
-          <div class="dejaecri">
+          <!--<div class="dejaecri">
             <div id ="exemplecom">
                 <div id="nomuti">
                     Nom utilisateur
                 </div>
                 <div id="photocom">
-                    <!-- inserer l'image pour l'instant on va mettre un cadre normal 
-                    <img src=" ">-->
-                    photo utilisateur
-                </div>
+                    <img class = "image" src="./Commentaire/View/profil.jpeg">                    </div>
                 <div id="comecri">
                     Commentaire de la personne
                 </div>
               </div>
               
-          </div>
+          </div>-->
           
-        </div>
-            </form>
-        </body>
+          
+          
+          
+</body>

@@ -21,4 +21,13 @@ if(isset($_GET['numRecette'])){
     echo 'La page nexiste pas';
 }
 
-require_once('Commentaire/View/Commentaire.phtml');
+require_once('Commentaire/Controllers/Commentaire_Controller.php');
+$commentaireController = new Commentaire_Controller();
+if(isset($_GET['afficherCommentaires'])){
+    //$controller->afficherCommentaires($_GET['numRecette']);
+    $commentaireController->afficherCommentaires();
+    //$Recette = $Requette->getRecette($numRecette);
+    
+}else{
+    echo 'La page nexiste pas';
+}

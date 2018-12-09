@@ -173,6 +173,39 @@ class Requette{
             return $auteur;   
     }
     
+   public function ajouterCommentaire($commentaire){
+        require_once('db/Db.php');        
+        $numUser = getUserID();
+        $sql = "INSERT INTO commentaire(Contenu,numUser,numRecette) VALUES('".$commentaire->getCommentaire()."',".$numUser.",".$commentaire->getNumRecette().")";
+       if ($this->db->query($sql)) {
+            echo  "<script type='text/javascript'>
+                alert('Nouveau commentaire Ajouté');
+                </script>";
+        } else {
+            echo  "<script type='text/javascript'>
+                alert('Erreur, pas possible de creer le commentaire, essayez autre fois');
+                </script>";        }
+
+    }
+    
+    public function afficherCommentaires($numRecette){
+        require_once('db/Db.php');        
+        $Commentaires = array();
+        $sql = "SELECT Contenu,Email FROM commentaire NATURAL JOIN utilisateur  WHERE numRecette =".$numRecette;
+        $result = $this->db->query($sql) ;
+        if($result->num_rows>0){
+            while($row = $result->fetch_assoc()) {
+                $Commentaires[] = $row;
+                 }
+        }else{
+            //echo 'Error 404 Pas de resultats trouvés';
+        }
+                
+        
+        $this->db->close();
+        return $Commentaires;
+        
+    }
     
     
     
