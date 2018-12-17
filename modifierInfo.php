@@ -11,6 +11,15 @@ if(!isset($_COOKIE[$nom])) {
 //connexion a la BDD pour changer les infos
 require_once("db/Db.php");
 //afficher la page
-require_once("Modification/View/Modification.phtml");
+require_once("Modification/Controller/Modification_Controller.php");
+$controller = new Modification_Controller();
+
+if(isset($_GET['action'])){
+    $action = $_GET['action'];
+    $controller->$action();
+}else{
+$controller->afficherForm();
+    
+}
 
 ?>
