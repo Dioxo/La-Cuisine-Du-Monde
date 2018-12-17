@@ -12,7 +12,7 @@ class Modification_Controller{
         }else{
             echo "<script>
             alert('Mot De passe mauvaise');
-            document.location.replace('Index.php?action=showRecettes');
+            document.location.replace('modifierInfo.php');
             </script>";
         }
     }
