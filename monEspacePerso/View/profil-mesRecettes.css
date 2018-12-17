@@ -1,0 +1,81 @@
+body{
+    background-color: #D6D6D6;
+}
+#image
+{
+    background-color: #C4C4C4;
+    border-radius:6px;
+        width: 11%;
+    height: 11%;
+     margin-left: 3%;
+     display: inline;
+}
+img
+{
+    margin-top: 2%;
+    width: 10%;
+    height: 10%;
+}
+.nomUtil,.mailUtil,.genreUtil
+{
+    padding-left: 30%;
+    margin-top: -4%;
+    font-family: Arial , Verdana, Helvetica, sans-serif;
+    font-size: 20px;
+     list-style-type: none;
+
+}
+.genreUtil
+{
+    margin-left: 10%;
+    font-size: 25px;
+}
+.mesrec
+{
+    padding-top: 10%;
+    margin-left: 7%;
+     font-family: Arial Black, Gadget, sans-serif;
+     font:bold 20px;
+     list-style-type: none;
+        margin-bottom: 5%;
+}
+#Ajouter
+{
+    margin-left: 64%;
+    font:bold 17px Arial;
+    margin-bottom: 5%;
+    
+}
+#bouton
+{
+    background:#023B5C;
+	color:#fff;
+	border-radius:4px;
+	width:210px;
+    height: 20px;
+	border:none;
+        margin-bottom: 5%;
+}
+.Recette-petit{
+    width: 280px;
+    height: 500px;
+}
+
+.image-petit{
+    width: 280px;
+    height: 200px;
+}
+
+.center{
+    margin-top: 15px;
+    margin-left: 5%;
+    margin-right: 1%;
+    float: left;
+    background-color:  rgba(0, 0, 0, 0.08);
+    margin-bottom: 2%;
+}
+.Ingredients,.description
+{
+   font: 10px Arial;
+    
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>La Cuisine Du Monde</title>
+        <link rel="stylesheet" href="monEspacePerso/View/profil-mesRecettes.css">
+    </head>
+    
+    <body>
+        
+        <div id="partieHaute">
+            <div id=image>
+                <img src="./monEspacePerso/View/profil-vide.jpg">
+            </div>
+            <div id="infos">
+                 
+                <li class = "mailUtil"> Mail : <?php echo $_COOKIE['NomUser'];?> </li>
+                <li class = "nomUtil"> User :  <?php echo $Pseudo;?> </li>
+                <li class = "genreUtil"> Chef</li>
+            </div>
+        </div>
+        <div class="PartieBasse">
+           <!--         <div id = "rec">
+                <li class ="mesrec">Mes Recettes :</li>
+                <form>
+                    <input id = "Ajouter"
+                               type="button"
+                           value="Ajouter nouvelle recette">
+                </form>
+            </div>
+    
+                 <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1&action=afficherCommentaires">
+               <img class="image-petit" src="./monEspacePerso/View/image-petit.jpg">
+           </a>
+            <h3 class="title">Brioche Tressée</h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation 15 min</h4>
+            <br/>
+            <h4 class="Ingredients">
+                Ingredients : <br/>
+            * 500 g de farine (farine de gruau * de préférence, sinon de la T45)<br/>
+            * 80 g de sucre en poudre<br/>
+            * 8 g de sel ...<br/></h4>
+            <h4 class="description">Pour cette recette, je voulais une brioche parfaite à manger juste comme ça, sans forcément mettre de la confiture ou de la pâte à tartiner dessus, même si cela reste possible.
+            Et je suis super contente du résultat ! ...</h4>
+       
+            </div>
+            -->
+            <?php 
+            
+            echo '<div id = "rec">
+                <li class ="mesrec">Mes Recettes :</li>
+                   <a id ="Ajouter" href=".\ajout.php?action=afficherAjoutRecette"> <input id="bouton" type="button" value="Ajouter nouvelle recette"> </a>
+               
+            </div>';
+                foreach($Recette as $value ){
+            echo'
+                 <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1&action=afficherCommentaires">
+               <img class="image-petit" src="./monEspacePerso/View/image-petit.jpg">
+           </a>
+            <h3 class="title">'.$value['Titre'].'</h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">'.$value['Temps'].'</h4>
+            <br/>
+                echo </h4>
+            <h4 class="description">';
+                    if(str_word_count($value['Description']) > 100){
+                    $arr = explode(' ',trim($value['Description']));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $value['Description'];  
+                 }
+            echo '</h4>
+       
+            </div>';
+            }
+            
+            
+            ?>
+        
+            
+        </div>
+        
+        
+        
+        
+        
+        
+    </body>

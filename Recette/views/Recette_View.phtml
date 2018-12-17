@@ -59,7 +59,7 @@
                 </p>
 
 
-                <p id = "pub">Publié par : <?php echo $Recette->getAuteur();?></p>
+                <p id = "pub"><?php echo '<a href="autreUtilisateur.php?auteur='.$Recette->getAuteur().'">'?>Publié par :</a> <?php echo $Recette->getAuteur();?></p>
                 <div id="decription">
                 <p class = "descript">Description :</br></br><?php echo $Recette->getDescription();?>
                     </div>

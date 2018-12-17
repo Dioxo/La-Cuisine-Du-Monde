@@ -36,9 +36,8 @@ header nav a {
 	color:#fff;
 	text-decoration:none;
 	padding:10px 20px;
-    
     /*n'est pas mettre plus de 80, sinon le menu ne se montre pas bien*/
-	line-height: 80px;
+	line-height: 70px;
 	font-size:15px;
 	font-weight:bold;
 	-webkit-transition:all 500ms ease;
@@ -80,7 +79,8 @@ ul, ol {
 {
    
     display:inline-block;
-      margin-left: 3%;
+    margin-left: 10%;
+    /*margin-right: -15%;*/
     margin-top: 2.5%;
 }
 .recetterecher
@@ -102,8 +102,8 @@ ul, ol {
 .nomutil
 {
     color: white;
-    font-size:15px;
+    font-size:14px;
 	font-weight:bold;
-    padding-left:20px;
+ 
     
 }

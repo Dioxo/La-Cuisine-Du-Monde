@@ -102,7 +102,7 @@ class Requette{
     {
         require_once('db/Db.php');        
         $sql="INSERT INTO recette (Titre,Description,Temps,NbPersonne,Auteur) VALUES 
-                                                    ('".$Recette->getTitre()."','".$Recette->getDescription()."','".$Recette->getTemps()."',".$Recette->getNb_De_Personne().",".$Recette->getAuteur().")";
+            ('".$Recette->getTitre()."','".$Recette->getDescription()."','".$Recette->getTemps()."',".$Recette->getNb_De_Personne().",".$Recette->getAuteur().")";
         
 
         if ($this->db->query($sql)) {
@@ -207,6 +207,52 @@ class Requette{
         
     }
     
+    public function afficherRecetteUser()
+    {
+        require_once('db/Db.php');
+        $userId = $this->getUserID();
+        //print_r($userId);
+        //$userId[0]['numUser'];
+      // print_r($userId[0]['numUser']);
+      
+       $sql = 'SELECT * FROM recette where Auteur ='.$userId[0]['numUser'];
+          $result = $this->db->query($sql) ;
+       if($result->num_rows>0){
+            while($row = $result->fetch_assoc()) {
+                $this->Recette[] = $row;
+                //echo "Titre: " . $row["Titre"]. " - Description: " . $row["Descritpion"]. " - Temps: " . $row["Temps"]. " - NbPersonne: " . $row["NbPersonne"] . " - Origine" . $row["Origine"] . " - Arome" . $row ["Arome"] . " - Fete" . $raw["Fete"] . " - Auteur" . $raw["Auteur"] . "<br>";
+                
+                /*foreach ($this->Recette as $recette) {
+                    echo $recette["Titre"];
+                }*/
+            }
+        }else{
+            //echo 'Vous n\'avez aucune recette';
+        }
+        
+        
+        //non fermer la connection ici, pcq dans l'objet Recette, on doit trouver la recette et aussi les ingredients, laisse fermer la requete Ingredients la connection a la BD
+        //$this->db->close();
+        return $this->Recette;
+    }
+    
+    public function getMailAuteurByID(){
+        
+        require_once('db/Db.php');        
+            $sql = "SELECT Email from utilisateur where Pseudo ='".$_GET['auteur']."'";
+            $result = $this->db->query($sql) ;
+            if($result){
+            while($row = $result->fetch_assoc()) {
+                $auteur[] = $row;
+                 }
+            }else{
+            echo 'Erreur pas de resultat '. $this->db->error;
+            }
+
+
+            //$this->db->close();
+            return $auteur;   
+    }
     
     
 }
