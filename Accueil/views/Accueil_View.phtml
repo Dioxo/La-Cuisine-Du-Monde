@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>La Cuisine Du Monde</title>
+        <link rel="stylesheet" href="Accueil/views/corps.css">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+        <!-- <script src="header.js"></script> -->
+    </head>
+    <body>
+        <!--
+       <header class="header2">
+           <div class="wrapper">
+               <div class="logo">La Cuisine Du Monde</div>
+               <nav>
+                   <a href="">Categories</a>
+                   <a href="">Mon Espace Personnel</a>
+                   <a href="">Notifications</a>
+                   <a href="">Conectarse</a>
+               </nav>
+           </div>
+       </header>
+       
+        -->
+        <div class="image">
+
+            <div class="search-box">
+                <form id="barrerech" action="recherche.php" method="get">
+                <input type="text" name="mot" class="search-txt" placeholder="Recette à chercher">
+                <a href="./recherche.php?mot=" class="search-btn">
+                <i class="fas fa-search"></i>   
+                </a>
+                </form>
+            </div>
+               
+            
+        </div>
+        
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1&action=afficherCommentaires">
+               <?php
+                echo '<img class="image-petit" src=Images/Recette/'.$Recette1->getImage().'>';
+				?>
+           </a>
+            <h3 class="title"><?php echo $Recette1->getTitre()?></h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette1->getTemps() ?></h4>
+            </br>
+            <h4 class="Ingredients">
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette1->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php 
+                if(str_word_count($Recette1->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette1->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette1->getDescription();  
+                 }?></h4>
+        </div>
+        
+        
+          
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=2&action=afficherCommentaires">
+				<?php
+                echo '<img class="image-petit" src=Images/Recette/'.$Recette2->getImage().'>';
+				?>
+           </a>
+            <h3 class="title"><?php echo $Recette2->getTitre()?></h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette2->getTemps() ?></h4>
+            </br>
+            <h4 class="Ingredients">
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette2->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php 
+                if(str_word_count($Recette2->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette2->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette2->getDescription();  
+                 }?></h4>
+        </div>
+        
+          
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1&action=afficherCommentaires">
+           <a href="recette.php?numRecette=1&action=afficherCommentaires">
+               <?php
+                echo '<img class="image-petit" src=Images/Recette/'.$Recette3->getImage().'>';
+				?>
+           </a>
+            <h3 class="title"><?php echo $Recette3->getTitre()?></h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette3->getTemps() ?></h4>
+            </br>
+            <h4 class="Ingredients">
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette3->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php 
+                if(str_word_count($Recette3->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette3->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette3->getDescription();  
+                 }?></h4>
+        </div>
+        
+          
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=2&action=afficherCommentaires">
+               <?php
+                echo '<img class="image-petit" src=Images/Recette/'.$Recette4->getImage().'>';
+				?>
+           </a>
+            <h3 class="title"><?php echo $Recette4->getTitre()?></h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette4->getTemps() ?></h4>
+            </br>
+            <h4 class="Ingredients">
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette4->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php 
+                if(str_word_count($Recette4->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette4->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette4->getDescription();  
+                 }?></h4>
+        </div>
+        
+          
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1&action=afficherCommentaires">
+               <?php
+                echo '<img class="image-petit" src=Images/Recette/'.$Recette5->getImage().'>';
+				?>
+           </a>
+            <h3 class="title"><?php echo $Recette5->getTitre()?></h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette5->getTemps() ?></h4>
+            </br>
+            <h4 class="Ingredients">
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette5->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description :";
+                
+                ?>
+             <h4 class="description"><?php 
+                if(str_word_count($Recette5->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette5->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette5->getDescription();  
+                 }?></h4>
+        </div>
+        
+          
+        <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=2&action=afficherCommentaires">
+               <?php
+                echo '<img class="image-petit" src=Images/Recette/'.$Recette6->getImage().'>';
+				?>
+           </a>
+            <h3 class="title"><?php echo $Recette6->getTitre()?></h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">Temps de preparation : <?php echo $Recette6->getTemps() ?></h4>
+            </br>
+            <h4 class="Ingredients">
+                <?php
+                
+                echo 'Ingredients : </br>';
+                $Ingredients = $Recette6->getIngredients();
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                            
+                    echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                        
+                }
+                echo "Description : </br>";?>
+             <h4 class="description"><?php 
+                if(str_word_count($Recette6->getDescription()) > 100){
+                    $arr = explode(' ',trim($Recette6->getDescription()));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $Recette6->getDescription();  
+                 }?></h4>
+               
+        </div>
+            
+       
+  
+    </body>
+</html>

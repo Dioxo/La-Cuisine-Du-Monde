@@ -1,0 +1,73 @@
+.Formulaire
+{
+    margin-top: 5%;
+   
+    
+}
+.ecriture
+{
+    display: inline;
+     margin-left: 5%;
+}
+.image
+{
+    width: 100px;
+    height: auto;    
+    background-color: #0074B9;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    float: left;
+    margin-left: 10%;
+}
+.commentairee
+{
+    padding-left: 20%;
+}
+.commentaire
+{
+   border:10px #0074B9 inset;
+    border-radius: 10px 10px 10px 10px;
+}
+#comm
+{
+    margin-left: 64%;
+	padding:6px 0 6px 0;
+	font:bold 15px Arial;
+	background:#0074B9;
+	color:#fff;
+	border-radius:4px;
+	width:130px;
+	border:none;
+	margin-bottom:6%;
+    
+}
+.dejaecri
+{
+    background-color: #6DC9FF;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+#exemplecom
+{
+    display: inline;
+    
+}
+#nomuti
+{
+   font-size: 20px;
+    padding-left: 13%;
+}
+#photocom
+{
+    background-color: #0074B9;
+    width: 10%;
+  border-radius: 10px 10px 10px 10px;
+
+}
+#comecri
+{
+    background-color: white;
+    width: 50%;
+    margin-left: 15%;
+}

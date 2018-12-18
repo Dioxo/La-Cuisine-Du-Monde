@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+	width:100%; /* Establecemos que el header abarque el 100% del documento */
+	height: 100px;
+    overflow:hidden; /* Eliminamos errores de float */
+	background:#0074B9;
+    
+}
+ 
+.wrapper {
+	width:90%; /* Establecemos que el ancho sera del 90% */
+	max-width:90%; /* Aqui le decimos que el ancho máximo sera de 1000px */
+	margin:auto; /* Centramos los elementos */
+	overflow:hidden; /* Eliminamos errores de float */
+}
+ 
+header .logo {
+	color:#f2f2f2;
+	font-size:30px;
+	line-height:100px;
+	float:left;
+    font-family : Comic Sans MS;
+}
+ 
+header nav {
+	float:right;
+	line-height:100px;
+}
+ 
+header nav a {
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 20px;
+    /*n'est pas mettre plus de 80, sinon le menu ne se montre pas bien*/
+	line-height: 70px;
+	font-size:15px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+ 
+header nav a:hover {
+	background:#023B5C;
+	border-radius:50px;
+}
+
+
+ul, ol {
+    list-style:none;
+}
+
+.nav > li {
+    float:left;
+}
+
+.nav li a {
+    background-color:#0074B9;
+    padding:10px 12px;
+    display:block;
+}
+
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+.barrechercher
+{
+   
+    display:inline-block;
+    margin-left: 10%;
+    /*margin-right: -15%;*/
+    margin-top: 2.5%;
+}
+.recetterecher
+{
+   width: 200px;
+    height: 25px;
+}
+#bouttonvalider
+{
+    width: 25px;
+    height: 25px;
+    
+     border:none;
+    background: url(boutonrecherche.png);
+    margin: 0 0 0 0;
+
+}
+.nomutil
+{
+    color: white;
+    font-size:14px;
+	font-weight:bold;
+ 
+    
+}

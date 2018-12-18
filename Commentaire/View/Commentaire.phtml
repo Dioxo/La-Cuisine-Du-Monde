@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+	<head>
+        <meta charset="UTF-8">
+        <title>La Cuisine Du Monde</title>
+        <link rel="stylesheet" href="Commentaire/View/Commentaire.css">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!-- <script src="header.js"></script> -->
+    </head>    
+    
+    
+	<body>
+  
+      <!--   URL = 'recette.php?numRecette=#NumRECETTE&action=ajouterCommentaire'  -->
+	  <form action="<?php echo 'recette.php?numRecette='.$_GET['numRecette'].'&action=ajouterCommentaire'?>" method="post">
+           <div class = "Formulaire">
+
+              <div class ="ecriture">
+
+                  <div >
+                         <!-- inserer l'image pour l'instant on va mettre un cadre normal -->
+                        <img class = "image" src="./Commentaire/View/profil.jpeg">    
+                  </div>
+                  <div class="commentairee">
+                      <textarea name="commentaire" rows ="5" cols ="95" class="commentaire"></textarea>
+                  </div>
+                  <div id= "boutoncomm">
+                        <input id = "comm"
+                       type="submit"
+                   value="Commenter">
+                 </div>
+              </div>
+          </div>
+
+      </form>
+    
+          <?php
+            //Array ( [0] => Array ( [Contenu] => Contenu [Email] => alex@gmail.com ) )
+        
+            for($i = 0; $i < count($commentaires); $i++){
+                
+                
+                echo '<div class="dejaecri">
+            <div id ="exemplecom">
+                <div id="nomuti">
+                    '.$commentaires[$i]['Email'].'
+                </div>
+                <div id="photocom">
+                    <img class = "image" src="Images/User/'.$commentaires[$i]['numUser'].'.jpg">                    </div>
+                <div id="comecri">
+                    '.$commentaires[$i]['Contenu'].'
+                </div>
+              </div>
+              
+          </div>';
+
+            }
+               
+          
+          ?>
+          
+          <!--<div class="dejaecri">
+            <div id ="exemplecom">
+                <div id="nomuti">
+                    Nom utilisateur
+                </div>
+                <div id="photocom">
+                    <img class = "image" src="./Commentaire/View/profil.jpeg">                    </div>
+                <div id="comecri">
+                    Commentaire de la personne
+                </div>
+              </div>
+              
+          </div>-->
+          
+          
+          
+          
+</body>

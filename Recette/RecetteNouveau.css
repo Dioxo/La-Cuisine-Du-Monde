@@ -1,0 +1,94 @@
+    
+#nav{
+	background_color : #023B5C;
+}
+#Nomsite
+{
+	font-size: 40px;
+	font-family : Comic Sans MS;
+	color:white;
+	padding-left:30px;
+	
+}
+
+.entete
+{
+	font-size:20px;
+}
+li
+{
+	 list-style: none; 
+    margin: 0;
+	display: inline;
+}
+#notif
+{
+	padding-right:10px;
+}
+
+#nomRec
+{
+	color : #0074B9;
+	font-size:36px;
+	padding-left:8%;
+	
+}
+#noteRec
+{
+	font-size:30px;
+	padding-left:20%;
+}
+#typeRec
+{
+	font-size:25px;
+	padding-left:20%;
+}
+#nbPrsRec
+{
+	font-size:20px;
+	padding-left:10%;
+}
+#tempsRec
+{
+	font-size:20px;
+	padding-left:40%;
+}
+
+
+.ImageRecette  {
+    padding-right:30%;
+	padding-top:1%;
+}
+.ImageRecette img {
+    float:left;
+	margin-top:1%;
+    margin-left: 2%;
+	width:40%;
+}
+#pub
+{
+	font-size:13px;
+	padding-left:1%;
+}
+#decription
+{
+	
+	padding-right:25%;
+	
+}
+#contenaire
+{
+	font-family:  Courier New,Helvetica, cursive,serif;
+	background: white url(Background.png) no-repeat ;
+	margin-left:15%;
+}
+.descript
+{
+	text-align:left;
+	padding-top:0.5%;
+	padding-left:5%;
+	padding-right:30%;
+	
+	
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> L'une de vos recettes préférées </title>
+		<link rel="stylesheet" href="Recette/RecetteNouveau.css" /> 
+		<meta charset = "utf-8">
+		<!--<link rel="stylesheet" href = "bootstrap.css">
+		<style type = "text/css">
+		nav{
+		background-color : #023B5C;
+		}
+		</style>-->
+	</head>
+	<body>
+	    
+	    <!--
+        <div id ="page">
+
+        <header id = "rass">
+            <nav id ="nav" class="navbar navbar-inverse navbar-fixed-top">
+                <ul class = "nav navbar-nav">
+                    <li> <a id="Nomsite">La cuisine du Monde</a></li>
+                    </ul>
+                    <ul class = "nav navbar-nav">
+                    <form class="nav navbar-form" >
+                    <input type="text" class="input-sm" placeholder='Entrez votre recherche'>
+                    <button type ="susbmit" class ="btn btn-primary btn-sm">Rechercher</button>
+                    </form>
+                    </ul>
+                <ul class ="nav navbar-bav navbar-right">
+                    <li id ="notif"><a href="Notification.html" target="_blank"> Notifications</a></li>
+                    <li id="connexion"><a href="Connexion.html" target="_blank">Connexion</a></li>
+                </ul>
+            </nav>
+        </header>
+        -->
+        <div id = "ContenuPage">
+                <p class = "entete" >
+                <h1 id ="nomRec"> <?php echo $Recette->getTitre();?></h1>
+
+                <li id = "noteRec"> Note : <?php echo $Recette->getNote();echo 'MANQUE IMPLEMENTATION';?> </li> 
+                <li id = "typeRec">Type <?php echo $Recette->getType();?></li>
+                </br>
+                <li id="nbPrsRec">Nombre personnes : <?php echo $Recette->getNb_De_Personne();?>     </li>    
+                <li id="tempsRec">Temps préparation :<?php echo $Recette->getTemps();?></li>
+                </p>
+                <div  id = "contenaire">
+                <p class="ImageRecette">
+					<?php
+                    echo '<img src="Images/Recette/'.$Recette->getImage().'" alt="ImageRecette">';
+					?>
+                    Ingredients :</br>  
+                    <?php
+                        $Ingredients = $Recette->getIngredients();
+                        for($i = 0 ; $i < count($Ingredients) - 1; $i++){
+                            
+                            echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
+                            
+                        }
+                    ?>
+                </p>
+
+
+                <p id = "pub"><?php echo '<a href="autreUtilisateur.php?auteur='.$Recette->getAuteur().'">'?>Publié par :</a> <?php echo $Recette->getAuteur();?></p>
+                <div id="decription">
+                <p class = "descript">Description :</br></br><?php echo $Recette->getDescription();?>
+                    </div>
+                    </div>
+            </div>
+
+		
+	</body>
+</html>        
+	

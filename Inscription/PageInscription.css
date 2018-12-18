@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Formulaire
+{
+	padding-top:10%;
+	padding-left:20%;	
+	margin:auto;
+	background-image:url(imageinscription.png);
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+    border-radius: 10px 10px 10px 10px;
+}
+#genre 
+{
+	margin-top:3%;
+	background-color:#D6D6D6;
+	height:40px;
+	width:70%;
+	word-spacing:40px;
+	box-sizing: border-box;  
+	font-family: Lato;   /* Police du texte */
+	font-size: 20px;   /* Taille de la police du texte */
+	font-weight: bold;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	padding-left:3%;
+	padding-top:0.7%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#pseudo
+{
+	margin-top:7%;
+	background-color:#D6D6D6;
+	height:40px;
+	width: 70%;   /* Permet d'ajuster la largeur du champ de saisie à 70% */
+	box-sizing: border-box;  
+	font-family: Lato;   /* Police du texte */
+	font-size: 20px;   /* Taille de la police du texte */
+	font-weight: bold;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	padding-left:3%;
+	padding-top:0.7%;
+    border-radius: 10px 10px 10px 10px;	
+		
+}
+#pass
+{
+	margin-top: 7%;
+	background-color:#D6D6D6;
+	height:40px;
+	width: 70%;   /* Permet d'ajuster la largeur du champ de saisie à 70% */
+	box-sizing: border-box;  
+	font-family: Lato;   /* Police du texte */
+	font-size: 20px;   /* Taille de la police du texte */
+	font-weight: bold;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	padding-left:3%;
+	padding-top:0.7%;
+    border-radius: 10px 10px 10px 10px;
+}
+#confirmpass
+{
+	margin-top:7%;
+	background-color:#D6D6D6;
+	height:40px;
+	width: 70%;   /* Permet d'ajuster la largeur du champ de saisie à 70% */
+	box-sizing: border-box;  
+	font-family: Lato;   /* Police du texte */
+	font-size:20px;   /* Taille de la police du texte */
+	font-weight: bold;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	padding-left:3%;
+	padding-top:0.7%;
+    border-radius: 10px 10px 10px 10px;
+}
+#admail
+{
+	margin-top:7%;
+		background-color:#D6D6D6;
+	height:40px;
+	width: 70%;   /* Permet d'ajuster la largeur du champ de saisie à 70% */
+	box-sizing: border-box;  
+	font-family: Lato;   /* Police du texte */
+	font-size:20px;   /* Taille de la police du texte */
+	font-weight: bold;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	padding-left:3%;
+	padding-top:0.7%;
+    border-radius: 10px 10px 10px 10px;
+}
+#commentaire
+{
+	margin-top:7%;
+	background-color:#D6D6D6;
+	height:130px;
+	width: 70%;   /* Permet d'ajuster la largeur du champ de saisie à 70% */
+	box-sizing: border-box;  
+	font-family: Lato;   /* Police du texte */
+	font-size:20px;   /* Taille de la police du texte */
+	font-weight: bold;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	padding-left:3%;
+	padding-top:0.7%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#confidentialite
+{
+	margin-top:7%;
+	padding-right:20%;
+	background-color:#D6D6D6;
+    border-radius: 10px 10px 10px 10px;	
+    height:90px;
+	width: 70%;   /* Permet d'ajuster la largeur du champ de saisie à 70% */
+	box-sizing: border-box;  
+	font-family: Lato;   /* Police du texte */
+	font-size:10px;   /* Taille de la police du texte */
+	font-weight: normal;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	text-align:left;
+	padding-left:5%;
+	padding-top:0.7%;
+	
+}
+#finpage
+{
+	display:inline;
+}
+#inscription
+{
+	margin-left:60%;
+	padding:6px 0 6px 0;
+	font:bold 30px Arial;
+	background:#478bf9;
+	color:#fff;
+	border-radius:4px;
+	width:150px;
+	border:none;
+	margin-bottom:10%
+}
+input
+{
+	margin-left:3%;
+}
+#champsrequis
+{
+
+	margin-top:7%;
+	background-color:#D6D6D6;
+	height:30px;
+	width: 13%;   
+	text-align:center;
+border-radius: 10px 10px 10px 10px;
+}
+

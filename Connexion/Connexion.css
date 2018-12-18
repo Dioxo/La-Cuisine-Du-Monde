@@ -1,0 +1,93 @@
+.Formulaire
+{
+    background-color: #D6D6D6;
+    margin:auto;
+}
+#ecriture
+{
+    font-size: 35px;
+    padding-left: 40%;
+    padding-top: 3%;
+    font-family: Arial , Verdana, Helvetica, sans-serif;
+    font-style:oblique;
+	font-weight:bold;
+    text-decoration:underline;
+    
+}
+.pseudo1
+{
+    margin-top: 5%;
+    margin-left: 25%;
+    font-family: Arial , Verdana, Helvetica, sans-serif;
+    font-size: 20px;
+    
+}
+.pseudo2
+{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 20%;
+}
+.pass1
+{
+    margin-top: 5%;
+    margin-left: 16.3%;
+    font-family: Arial , Verdana, Helvetica, sans-serif;
+    font-size: 20px;
+  margin-bottom: 5%;    
+}
+.pass2
+{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 20%;
+}
+
+#boutonco
+{
+    margin-top: 5%;
+    margin-left: 55%;
+    margin-bottom: 3%;
+    font:bold 20px Arial;
+	background:#478bf9;
+	color:#fff;
+	border-radius:4px;
+	width:130px;
+	border:none;
+}
+.connexioninscription
+{
+    margin-top: 5%;
+}
+.boutonInscription
+{
+    font:bold 20px Arial;
+	background:#023B5C;
+	color:#fff;
+	border-radius:4px;
+	width:130px;
+	border:none;
+    margin-left: 25%;
+}
+.boutonMdpoub
+{
+    font:bold 20px Arial;
+	background:#023B5C;
+	color:#fff;
+	border-radius:4px;
+	width:210px;
+	border:none;
+    margin-left: 10%;
+}
+.maiil
+{
+    margin-top: 5%;
+    background-color:darkgrey;
+    color: azure;
+    padding-left: 10%;
+    font-size: 20px;    
+}
+body
+{
+    margin-bottom: 3%;
+}

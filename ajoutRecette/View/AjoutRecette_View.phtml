@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+	<head>
+        <meta charset="UTF-8">
+        <title>La Cuisine Du Monde</title>
+        <link rel="stylesheet" href="./ajoutRecette/PageAjoutRecette.css">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+        <!-- <script src="header.js"></script> -->
+    </head>
+	
+	
+	<body>
+	  
+        <div class = "Formulaire">
+	   <form action="ajout.php?action=creerRecette" method="post">
+		<p id = "ajouterrec">Ajouter une recette : </p>
+	   
+	   <div id ="recette">
+			
+			<label for="pseudo">* Recette | </label>
+			<input type="radio" name="media"  value="publique" > Publique
+			<input type="radio" name="media" value="privee" > Privée
+	   </div>
+		
+
+		<div id = "title">
+		   <label for="titles">* Titre |</label>
+		   <input type="text" style= width:350px name ="titre"  />
+	   </div>
+	   
+	   <div id="type">
+
+		   <label for="types">* Type |</label>
+		   <input type="text" style= width:350px name="typer" />
+	   </div>
+ 
+	   <div id ="time">
+			   <label for="times">* Temps Préparation |</label>
+			   <input type="text"  style= width:350px name = "timer"/>
+		</div>
+		
+		<div id ="nombreprs">
+			   <label for="times">* Nombre de personnes |</label>
+			   <input type="text" style= width:350px name ="nombrepersonne" />
+		</div>
+		
+		<div id ="description">
+			<p>* Description | </p>
+			<textarea rows ="15" cols ="95" name = "descript"></textarea>
+		</div>
+		<div id ="joindre">
+			Joindre des fichiers | 
+			<img id="imgjoindre" src="./ajoutRecette/imageJoindre.png" />
+			
+		</div>
+		
+		
+		<div id ="finpage">
+			
+			<div id ="champsrequis">
+				* Champs requis
+			</div>
+			
+		<div id = "boutonfin">
+				<input id = "Ajouter"
+			   type="submit"
+		   value="Ajouter">
+		 </div>
+		 </div>
+		  </form>
+
+		</div> 
+		    
+	</body> 
