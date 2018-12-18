@@ -1,7 +1,5 @@
 <?php
 
-require_once("Recherche/Controller/Recherche_Controller.php");
-$controller = new Recherche_Controller();
 
 require_once("db/Db.php");
 
@@ -15,15 +13,8 @@ if(!isset($_COOKIE[$nom])) {
     //l'utilisateur est connecte
     require_once("headerConnecte.html");
 }
-
- if(isset($_GET['action'])){
-    $action = $_GET['action'];
-    $controller->$action();   
-}else{
-     /*Changement de 'La page n'existe pas' 
-    par montrer la page d'accueil           */
-     $controller->showRecettes();
-}
-
+    require_once("Recherche/Controller/Recherche_Controller.php");
+    $controller = new Recherche_Controller();
+    $controller->showRecettes();
 
 ?>

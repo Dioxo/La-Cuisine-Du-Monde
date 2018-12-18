@@ -316,7 +316,7 @@ class Requette{
     }
     
     public function getRecherche($mot){
-        $sql = "SELECT `Titre`,`Description` FROM `recette` WHERE `Titre` LIKE '".$mot."%' UNION SELECT `Titre`,`Description` FROM `recette` NATURAL JOIN utilisateur WHERE `Pseudo` LIKE '".$mot."%'";
+        $sql = "SELECT `Titre`,`Description` FROM `recette` WHERE `Titre` LIKE '%".$mot."%' UNION SELECT `Titre`,`Description` FROM `recette` NATURAL JOIN utilisateur WHERE `Pseudo` LIKE '%".$mot."%'";
     
             $result = $this->db->query($sql);
             if($result){
