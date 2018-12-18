@@ -5,6 +5,7 @@
     height: 420px;
 
 }
+
 li
 {
     list-style-type: none;
@@ -20,27 +21,31 @@ li
 }
 #infosProfil
 {
-    background-color: #494949;
+   
     margin-left: 30%;
-    margin-top: 3%;
-    width : 550px;
-    height: 30px;
+    margin-top: 3%;  
     border-radius: 20px 20px 20px 20px;
+    background-color: #494949;
+    width :550px;
+    height: 30px;
 }
 .nomUtil
 {
-    padding-left: 10%;
+    padding-left: 4%;
     padding-top: 3%;
     font-weight: bold;
     color: white;
     font-size: 25px;
+
 }
 .mailUtil
 {
-    padding-left: 33%;
-    padding-top: 3%;
+    padding-left: 13%;
     color: white;
     font-size: 25px;
+    
+    padding-right: 2%;
+   
 }
 #nombreRec
 {

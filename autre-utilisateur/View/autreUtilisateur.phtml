@@ -13,11 +13,11 @@
                 <img id = "toto" src="./autre-utilisateur/View/profil-vide.jpg">
             </div>
             <div id ="infosProfil">
-                  <li class = "nomUtil"> User </li>
-                <li class = "mailUtil"> User@domaine.com </li>
+                  <li class = "nomUtil"> <?php echo $_GET['auteur'] ?> </li>
+                <li class = "mailUtil"> <?php echo $mailUtilisateur?> </li>
             </div>
             <div id ="nombreRec">
-                Nombre de recettes proposées : X
+                Nombre de recettes proposées : <?php echo $nombreRec ?>
             </div>
         </div>
         <div id = "partieBasse">
@@ -29,7 +29,7 @@
             <div class = "recprop">
                 Recettes proposées : 
             </div>
-             <div class="Recette-petit center" >
+             <!--<div class="Recette-petit center" >
            <a href="Recette/RecetteNouveau.html">
                <img class="image-petit" src="./Profil-recettes/View/image-petit.jpg">
            </a>
@@ -45,7 +45,37 @@
             <h4 class="description">Pour cette recette, je voulais une brioche parfaite à manger juste comme ça, sans forcément mettre de la confiture ou de la pâte à tartiner dessus, même si cela reste possible.
             Et je suis super contente du résultat ! ...</h4>
        
-            </div>
+            </div>-->
+            <?php 
+            
+                foreach($Recette as $value ){
+            echo'
+                 <div class="Recette-petit center" >
+           <a href="recette.php?numRecette=1&action=afficherCommentaires">
+               <img class="image-petit" src="./monEspacePerso/View/image-petit.jpg">
+           </a>
+            <h3 class="title">'.$value['Titre'].'</h3>   
+            <h4 class="Note">Note 4.5</h4>
+            <h4 class="Temps">'.$value['Temps'].'</h4>
+            <br/>
+                 </h4>
+            <h4 class="description">';
+                    if(str_word_count($value['Description']) > 100){
+                    $arr = explode(' ',trim($value['Description']));
+                    for($i = 0 ; $i < 100 ; $i++){
+                        echo $arr[$i]." ";
+                    }
+                    echo '...';
+                }else{
+                 echo $value['Description'];  
+                 }
+            echo '</h4>
+       
+            </div>';
+            }
+            
+            
+            ?>
          
          </div>
         
