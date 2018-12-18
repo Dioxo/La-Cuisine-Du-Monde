@@ -255,6 +255,7 @@ class Requette{
             return $auteur;   
     }
     
+
      public function getUserIDByMail(){
        require_once('db/Db.php');
          $sql = "SELECT numUser from utilisateur where Pseudo ='".$_GET['auteur']."'";
@@ -269,6 +270,71 @@ class Requette{
           return $id['numUser'];   
      }
     
+
+    public function comparerMDP($mdp){
+        require_once('db/Db.php');
+        $nom = 'NomUser';
+            $sql = "SELECT Mdp from utilisateur where Email ='".$_COOKIE[$nom]."'";
+            $result = $this->db->query($sql) ;
+            if($result){
+            while($row = $result->fetch_assoc()) {
+                $mdpBDD[] = $row;
+                 }
+            }else{
+            echo 'Erreur pas de resultat '. $this->db->error;
+            }
+
+            //$this->db->close();
+   
+        
+            if(strcmp($mdp,$mdpBDD[0]['Mdp']) == 0){
+                return true;
+            }else{
+                return false;
+            } 
+    }
+    
+    public function changerInfoUSer($newMdp,$nouveauEmail){
+
+        $sql = "UPDATE `utilisateur` SET `Mdp`='".$newMdp."' ,`Email`='".$nouveauEmail."' WHERE Email = '".$_COOKIE['NomUser']."'";
+        
+        if ($this->db->query($sql) === TRUE) {
+            //echo "Record updated successfully";                    
+            $nom = 'NomUser';
+            unset($_COOKIE[$nom]);
+            setcookie($nom, '', time() - 3600, '/'); // empty value and old timestamp
+            
+            $value = $nouveauEmail;
+                setcookie("NomUser", $value, 0, "/");
+                echo "<script type='text/javascript'>
+                alert('Changement des Informations effectifs');
+                document.location.replace('Index.php?action=showRecettes');
+                </script>"; 
+        } else {
+            //cecho "Error updating record: " . $conn->error;
+        }
+    }
+    
+    public function getRecherche($mot){
+        $sql = "SELECT `Titre`,`Description` FROM `recette` WHERE `Titre` LIKE '".$mot."%' UNION SELECT `Titre`,`Description` FROM `recette` NATURAL JOIN utilisateur WHERE `Pseudo` LIKE '".$mot."%'";
+    
+            $result = $this->db->query($sql);
+            if($result){
+            while($row = $result->fetch_assoc()) {
+                $recettes[] = $row;
+                 }
+            }else{
+            echo 'Erreur pas de resultat '. $this->db->error;
+            }
+
+            //$this->db->close();
+   
+        
+            
+        return $recettes;
+    
+    }
+ 
     
     public function getNombreReceteByID()   
     {
