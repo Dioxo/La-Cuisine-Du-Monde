@@ -180,7 +180,7 @@ class Requette{
        if ($this->db->query($sql)) {
             echo  "<script type='text/javascript'>
                 alert('Nouveau commentaire Ajouté');
-                document.location.replace('recette.php?numRecette=1&action=afficherCommentaires');
+                document.location.replace('recette.php?numRecette=".$numRecette."&action=afficherCommentaires');
                 </script>";
         } else {
             echo  "<script type='text/javascript'>
@@ -316,21 +316,20 @@ class Requette{
     }
     
     public function getRecherche($mot){
-        $sql = "SELECT `Titre`,`Description` FROM `recette` WHERE `Titre` LIKE '%".$mot."%' UNION SELECT `Titre`,`Description` FROM `recette` NATURAL JOIN utilisateur WHERE `Pseudo` LIKE '%".$mot."%'";
-    
+        $recettes = array() ;
+        $sql ="SELECT recette.Titre,recette.Description, x.Email, x.Pseudo FROM `recette` NATURAL JOIN (SELECT utilisateur.Email, utilisateur.numUser as Auteur, utilisateur.Pseudo FROM utilisateur)x WHERE `Titre` LIKE  '%".$mot."%'UNION SELECT recette.Titre,recette.Description, utilisateur.Email, utilisateur.Pseudo FROM `recette` NATURAL JOIN utilisateur  WHERE `Pseudo` LIKE '%".$mot."%'";
             $result = $this->db->query($sql);
             if($result){
             while($row = $result->fetch_assoc()) {
                 $recettes[] = $row;
                  }
+                
             }else{
             echo 'Erreur pas de resultat '. $this->db->error;
             }
 
             //$this->db->close();
-   
-        
-            
+
         return $recettes;
     
     }

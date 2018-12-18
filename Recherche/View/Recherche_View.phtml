@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>La Cuisine Du Monde</title>
-        <link rel="stylesheet" href="Recherche.css">
+        <link rel="stylesheet" href="Recherche/View/Recherche.css">
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -12,25 +12,57 @@
     <body>
         
         <div id ="contenuPage">
-            <div id ="RechercheUser">
+            <!-- 
+               <div id ="RechercheUser">
                 <div id=Vide>
                 <img class = "image" src="profil-vide.jpg">  
             </div>
-                
+               
             <div id="infos">
                   <li class = "nomUtil"> User : </li>
                 <li class = "mailUtil"> Mail :  </li>
             </div>
             </div>
-            <div id ="RechercheRecette">
+            <div id ="RechercheRecette">   -->
+            <?php
+             $description = "";
+            
+                for($j = 0; $j < count($Recette); $j++){
                 
+                
+                if(str_word_count($Recette[$j]['Description']) > 70){
+                    $arr = explode(' ',trim($Recette[$j]['Description']));
+                    for($i = 0 ; $i <70 ; $i++){
+                        $description .= $arr[$i]." ";
+                    }
+                    $description .= '...';
+                }else{
+                 $description = $Recette[$j]['Description'];  
+                 }
+                
+                echo '<div id="rec">
+                    <li class = "TempsPreparation"> Titre :'.$Recette[$j]['Titre'].'  </li>
+                    <li class = "Auteur"> Author :'.$Recette[$j]['Pseudo'].' </li>
+                    <li class = "Titre"> MailUser : '.$Recette[$j]['Email'].' </li>
+                    <li class = "Description"> Description : '.$description.' </li>
+                    </div>
+                    </div>';
+                
+                 $description = "";
+
+            }
+            
+            
+            
+            ?>
+          <!--      
             <div id="rec">
+                <li class = "TempsPreparation"> Titre :  </li>
                   <li class = "Auteur"> Author : </li>
                 <li class = "Titre"> MailUser :  </li>
-                <li class = "TempsPreparation"> Temps Préparation :  </li>
                 <li class = "Description"> Description :  </li>
             </div>
         </div>
-        </div>
+        </div>-->
         
     </body>
