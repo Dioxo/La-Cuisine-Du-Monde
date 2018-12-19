@@ -77,16 +77,16 @@ ul, ol {
 }
 .barrechercher
 {
-   
     display:inline-block;
     margin-left: 10%;
-    /*margin-right: -15%;*/
+    margin-right: -10%;
     margin-top: 2.5%;
 }
 .recetterecher
 {
    width: 200px;
     height: 25px;
+   
 }
 #bouttonvalider
 {

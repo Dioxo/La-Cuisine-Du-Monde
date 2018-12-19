@@ -29,6 +29,7 @@
   width: 250px;
   height: 30px;
     border: none;
+    color: white;
 }
 .search-btn {
  background: white;
@@ -57,7 +58,6 @@
  background: none;
  outline: none;
  float: left;
- color: white;
  font-size: 16px;
  transition: 0.4s;
  line-height: 40px;
