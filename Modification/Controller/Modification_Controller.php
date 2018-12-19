@@ -23,7 +23,6 @@ class Modification_Controller{
     
     public function changerInfo(){
         $newMdp = $_POST['NewMdp'];
-        echo 'asdads'.$newMdp;
         $confirmationNewMdp = $_POST['confirmationNewMdp'];
         $nouveauEmail = $_POST['Email'];
         $confirmationEmail = $_POST['confirmationEmail'];
