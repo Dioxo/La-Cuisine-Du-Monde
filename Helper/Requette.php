@@ -73,8 +73,6 @@ class Requette{
         //$this->db->close();
         return $this->Contient;
     }        
-
-
     
     public function creerUtilisateur($utilisateur){
         //echo 'chercher personnes';
