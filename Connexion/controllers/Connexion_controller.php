@@ -26,7 +26,9 @@
                 alert('Bienvenue');
                 document.location.replace('Index.php?action=showRecettes');
                 </script>";               
-                
+                require_once('Helper/Historique.php');
+				Historique::newLine("L'utilisateur ".$username." s'est connecté.");
+				
             } else{   
                 echo "<script type='text/javascript'>
                 alert('Le mot de passe ou le Login est incorrect');

@@ -13,11 +13,7 @@ class Commentaire_Model{
         require_once('./Helper/Requette.php');
         $requette = new Requette();
         $numUser = $requette->getUserID()[0]['numUser'];
-        $requette->ajouterCommentaire($commentaire, $numRecette, $numUser);
-		
-		require_once('./Helper/Historique.php');
-		$histo = new Historique();
-		$result = $histo::newLine('Nouveau commentaire ajouté sur la recette '.$numRecette);
+        $requette->ajouterCommentaire($commentaire, $numRecette, $numUser);;
     }
     
 }

@@ -22,13 +22,15 @@ class Accueil_Controller{
         
         $nom = 'NomUser';
         if (isset($_COOKIE[$nom])) {
+			require_once('Helper/Historique.php');
+			Historique::newLine("L'utilisateur ".$_COOKIE[$nom]." s'est déconnecté.");
             unset($_COOKIE[$nom]);
             setcookie($nom, '', time() - 3600, '/'); // empty value and old timestamp
             
             echo "<script type='text/javascript'>
                 document.location.replace('Index.php?action=showRecettes');
                 </script>";  
-            
+				
         }
     }
     

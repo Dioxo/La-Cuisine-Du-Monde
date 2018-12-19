@@ -14,7 +14,7 @@
 	<body>
 	  
         <div class = "Formulaire">
-	   <form action="ajout.php?action=creerRecette" method="post">
+	   <form action="ajout.php?action=creerRecette" method="post" enctype="multipart/form-data">
 		<p id = "ajouterrec">Ajouter une recette : </p>
 	   
 	   <div id ="recette">
@@ -51,8 +51,7 @@
 			<textarea rows ="15" cols ="95" name = "descript"></textarea>
 		</div>
 		<div id ="joindre">
-			Joindre des fichiers | 
-			<img id="imgjoindre" src="./ajoutRecette/imageJoindre.png" />
+			Joindre une image (format accepté : jpg)<input id="fichier1"  name="fichier" type="file"  />
 			
 		</div>
 		

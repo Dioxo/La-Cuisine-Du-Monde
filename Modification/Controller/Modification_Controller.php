@@ -37,9 +37,24 @@ class Modification_Controller{
                 alert("Les Mot de passe ou les emails sont incorrects");
             </script>';
         }else{
+			//Upload Image
+			require_once 'Helper/Requette.php';
+			$Requette = new Requette();
+			$IdUser =  $Requette->getUserID();        
+			$num = $IdUser[0]['numUser'];
+			
+			if (isset($_FILES['fichier'])) $LeFic=$num.'.jpg';
+				else $LeFic="";
+			if(  $LeFic!="" )
+			 {
+				$destination="Images/User/";
+				copy($_FILES['fichier']['tmp_name'],$destination.$LeFic);
+			 }
+			 
+			//Modifier infos
             require_once("./Modification/Model/Modification_Model.php");
             $model = new Modification_Model();
-            $model->changerInfo($newMdp,$nouveauEmail);
+            $model->changerInfo($newMdp,$nouveauEmail);		
         }
         
     }

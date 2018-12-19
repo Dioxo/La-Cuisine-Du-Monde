@@ -22,6 +22,19 @@ class Inscription_controller{
         //echo $utilisateur;
         $model = new Inscription_model();
         $model->sauvegarder($utilisateur);
+		
+		//Upload Image
+		require_once 'Helper/Requette.php';
+        $Requette = new Requette();
+		$num = $Requette->getLastUserID();       
+		
+		if (isset($_FILES['fichier'])) $LeFic=$num.'.jpg';
+			else $LeFic="";
+		if(  $LeFic!="" )
+		 {
+			$destination="Images/User/";
+			copy($_FILES['fichier']['tmp_name'],$destination.$LeFic);
+		 }
     }
     
 }

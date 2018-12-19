@@ -13,7 +13,7 @@
 	
 	<body>
 
-	   <form action="inscription.php?action=submit" method="post">
+	   <form action="inscription.php?action=submit" method="post"  enctype="multipart/form-data" >
 	      
 	   <div class = "Formulaire">
 
@@ -50,6 +50,10 @@
                 <p>Commentaires : </p>
                 <textarea rows ="5" cols ="95"></textarea>
             </div>
+			<div id ="joindre">
+				Joindre une image (format accepté : jpg)<input id="fichier2"  name="fichier" type="file"  />
+			
+			</div>
 
             <div id ="confidentialite">
                 <input  type="checkbox" name="pfm" value="dos"><U><I> * Confidentialité des données utilisteur:</I></U><br/>

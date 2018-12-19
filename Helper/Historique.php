@@ -1,16 +1,15 @@
 <?php
 class Historique{
 	
-	public function __construct(){	
-	}
-
 	public static function newLine($ligne){
-		$fp = fopen('./Helper/log.txt','a');
+		$file = fopen("log.txt","a");	
+		date_default_timezone_set("Europe/Paris");		
 		$date = date('d-m-Y');
-		$heure = date('H:i');
-		fwrite($fp,''.$date.' '.$heure.' '.$ligne.'\n');
-		
-		fclose($fp)
+		$heure = date('H:i:s');
+		$txt = ''.$date.' '.$heure.' '.$ligne.PHP_EOL;
+		fwrite($file,$txt);		
+		$resu = fclose($file);
+		return $resu;
 	}
 }
 ?>

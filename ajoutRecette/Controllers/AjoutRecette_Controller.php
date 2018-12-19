@@ -23,6 +23,27 @@ class AjoutRecette_Controller{
         require_once("ajoutRecette/Model/AjoutRecette_Model.php");
         $model = new AjoutRecette_Model();
         $model->inserterRecette($this->Recette);
+		
+		//Upload Image
+		require_once 'Helper/Requette.php';
+        $Requette = new Requette();
+		$num = $Requette->getLastNumRecette();       
+		
+		if (isset($_FILES['fichier'])) $LeFic=$num.'.jpg';
+			else $LeFic="";
+		if(  $LeFic!="" )
+		 {
+		  $destination="Images/Recette/";
+		  $extensions_ok = array ( ".jpg");
+		  if (in_array(strtolower(substr($LeFic, -4)),$extensions_ok))
+		   {
+		   //========= bonne  extention on copie =====
+			  copy($_FILES['fichier']['tmp_name'],$destination.$LeFic);
+		   }
+		   else{
+			 echo "Erreur format";  
+		   }
+		 }
         
             
            

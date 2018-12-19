@@ -18,7 +18,7 @@ class Requette{
     public function getRecette($numRecette){
         require_once('db/Db.php');
         //echo 'hi' . $this->Recette;
-        $sql = "SELECT numRecette, Titre, Description, Temps, NbPersonne, Origine, Arome, Fete, Auteur, Gout FROM recette WHERE numRecette = " .$numRecette;
+        $sql = "SELECT numRecette, Titre, Description, Temps, NbPersonne, Auteur FROM recette WHERE numRecette = " .$numRecette;
         $result = $this->db->query($sql) ;
         if($result->num_rows>0){
             while($row = $result->fetch_assoc()) {
@@ -38,6 +38,20 @@ class Requette{
         //$this->db->close();
         return $this->Recette;
     }
+	
+	public function getLastNumRecette() {
+		require_once('db/Db.php');
+        $sql = "SELECT max(numRecette) as num from Recette";
+        $result = $this->db->query($sql) ;
+        if($result->num_rows>0){
+            while($row = $result->fetch_assoc()) {
+              $resu = $row["num"];  
+            }
+        }else{
+            echo 'il ny a pas de resultats';
+		}
+		return $resu;
+	}
     
     public function getType($numRecette){
         require_once('db/Db.php');        
@@ -91,6 +105,8 @@ class Requette{
         
         if ($this->db->query($sql) === TRUE) {
             echo "New record created successfully";
+			require_once('Helper/Historique.php');
+			Historique::newLine("Nouvel utilisateur : ".$utilisateur->getPseudo().".");
         } else {
             echo "Error: " . $sql . "<br>" . $this->db->error;
         }
@@ -110,6 +126,8 @@ class Requette{
             echo  "<script type='text/javascript'>
                 alert('Nouvelle Recette Ajoutée');
                 </script>";
+			require_once('Helper/Historique.php');
+			Historique::newLine("Recette ".$Recette->getTitre()." ajoutée par l'utilisateur ".$Recette->getAuteur().".");
         } else {
             echo  "<script type='text/javascript'>
                 alert('Erreur, pas possible de creer la recette, essayez autre fois');
@@ -155,7 +173,21 @@ class Requette{
             return $id;   
         }
     }
-    
+	
+	public function getLastUserID(){
+		require_once('db/Db.php');
+        $sql = "SELECT max(numUser) as num from utilisateur";
+        $result = $this->db->query($sql) ;
+        if($result->num_rows>0){
+            while($row = $result->fetch_assoc()) {
+              $resu = $row["num"];  
+            }
+        }else{
+            echo 'il ny a pas de resultats';
+		}
+		return $resu;
+	}
+	
     public function getAuteurByID($id){
         
         require_once('db/Db.php');        
@@ -181,12 +213,14 @@ class Requette{
             echo  "<script type='text/javascript'>
                 alert('Nouveau commentaire Ajouté');
                 document.location.replace('recette.php?numRecette=".$numRecette."&action=afficherCommentaires');
+				
                 </script>";
+			require_once('Helper/Historique.php');
+			Historique::newLine("Nouveau commentaire ajouté sur la recette ".$numRecette." par l'utilisateur ".$numUser.".");
         } else {
             echo  "<script type='text/javascript'>
                 alert('Erreur, pas possible de creer le commentaire, essayez autre fois');
                 </script>";        }
-
     }
     
     public function afficherCommentaires($numRecette){
@@ -301,6 +335,8 @@ class Requette{
         if ($this->db->query($sql) === TRUE) {
             //echo "Record updated successfully";                    
             $nom = 'NomUser';
+			require_once('Helper/Historique.php');
+			Historique::newLine("L'utilisateur ".$_COOKIE[$nom]." a changé ses informations.");
             unset($_COOKIE[$nom]);
             setcookie($nom, '', time() - 3600, '/'); // empty value and old timestamp
             
@@ -310,6 +346,7 @@ class Requette{
                 alert('Changement des Informations effectifs');
                 document.location.replace('Index.php?action=showRecettes');
                 </script>"; 
+			
         } else {
             //cecho "Error updating record: " . $conn->error;
         }

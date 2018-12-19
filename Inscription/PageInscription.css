@@ -107,6 +107,22 @@
     border-radius: 10px 10px 10px 10px;
 }
 
+#joindre
+{
+	margin-top:7%;
+		background-color:#D6D6D6;
+	height:40px;
+	width: 70%;   /* Permet d'ajuster la largeur du champ de saisie à 70% */
+	box-sizing: border-box;  
+	font-family: Lato;   /* Police du texte */
+	font-size:20px;   /* Taille de la police du texte */
+	font-weight: bold;   /* Graisse du texte : normal = normal ; bold = gras */
+	letter-spacing: 2px; 
+	padding-left:3%;
+	padding-top:0.7%;
+    border-radius: 10px 10px 10px 10px;
+}
+
 #confidentialite
 {
 	margin-top:7%;

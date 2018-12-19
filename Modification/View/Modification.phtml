@@ -13,7 +13,7 @@
 	
 	<body>
         <div>
-         <form action="modifierInfo.php?action=confirmerMDP" method="post">
+         <form action="modifierInfo.php?action=confirmerMDP" method="post" enctype="multipart/form-data">
 
            <div class = "Formulaire">
 
@@ -39,6 +39,11 @@
                        <label for="mail">Confirmer nouvelle adresse mail :</label>
                        <input type="email" name="confirmationEmail" class="confirmail"  placeholder="Ex : Zozor90@hotmail.fr"  />
                 </div>
+				
+				<div id ="joindre">
+					Changer son image de profil (format accepté : jpg)<input id="fichier3" name="fichier" type="file"  />
+			
+				</div>
 
                </div>
                 <div id ="confidentialite">
