@@ -18,7 +18,7 @@ class Requette{
     public function getRecette($numRecette){
         require_once('db/Db.php');
         //echo 'hi' . $this->Recette;
-        $sql = "SELECT Titre, Description, Temps, NbPersonne, Origine, Arome, Fete, Auteur, Gout FROM recette WHERE numRecette = " .$numRecette;
+        $sql = "SELECT Titre, Description, Temps, NbPersonne, Auteur FROM recette WHERE numRecette = " .$numRecette;
         $result = $this->db->query($sql) ;
         if($result->num_rows>0){
             while($row = $result->fetch_assoc()) {

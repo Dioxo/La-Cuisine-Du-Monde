@@ -64,9 +64,9 @@
     font:bold 20px Arial;
 	background:#023B5C;
 	color:#fff;
-	border-radius:4px;
-	width:130px;
-	border:none;
+	padding-left: 10px;
+    padding-right: 10px;
+    border-radius:4px;
     margin-left: 25%;
 }
 .boutonMdpoub

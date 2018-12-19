@@ -3,7 +3,7 @@ body{
 }
 #image
 {
-    background-color: #C4C4C4;
+   
     border-radius:6px;
         width: 11%;
     height: 11%;
@@ -41,11 +41,11 @@ img
 }
 #Ajouter
 {
-    margin-left: 64%;
+    margin-left: 54%;
     font:bold 17px Arial;
     margin-bottom: 5%;
-    
 }
+
 #bouton
 {
     background:#023B5C;
@@ -54,7 +54,7 @@ img
 	width:210px;
     height: 20px;
 	border:none;
-        margin-bottom: 5%;
+    margin-bottom: 5%;
 }
 .Recette-petit{
     width: 280px;

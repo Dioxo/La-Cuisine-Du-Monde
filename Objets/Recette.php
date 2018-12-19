@@ -35,15 +35,15 @@ class Recette{
         $this->description = $Recette[0]["Description"];
         $this->temps = $Recette[0]["Temps"];
         $this->nb_De_Personne = $Recette[0]["NbPersonne"];
-        $this->origine = $Recette[0]["Origine"];
-        $this->arome = $Recette[0]["Arome"];
-        $this->fete = $Recette[0]["Fete"];
+        //$this->origine = $Recette[0]["Origine"];
+      //  $this->arome = $Recette[0]["Arome"];
+        //$this->fete = $Recette[0]["Fete"];
         //$this->auteur = $Recette[0]["Auteur"];
         
         $auteur = $Requette->getAuteurByID($Recette[0]["Auteur"]);
         $this->auteur = $auteur[0]["Pseudo"];
         
-        $this->gout = $Recette[0]["Gout"];
+        //$this->gout = $Recette[0]["Gout"];
         
         
         /*
