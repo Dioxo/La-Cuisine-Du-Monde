@@ -53,7 +53,7 @@ class Recette{
         $Ingredients = $Requette->getContient($numRecette);
         
         //echo $Ingredients[1]["nomIngredient"];
-        for($i = 0; $i < 7 ;  $i++){
+        for($i = 0; $i <  count($Ingredients) ;  $i++){
         //echo $Ingredients[$i]["nomIngredient"];
           //  echo "</br>";
             array_push( $this->ingredients, $Ingredients[$i]["nomIngredient"] , $Ingredients[$i]["Quantite"] );

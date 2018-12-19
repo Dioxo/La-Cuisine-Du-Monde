@@ -38,8 +38,7 @@
                 <p class = "entete" >
                 <h1 id ="nomRec"> <?php echo $Recette->getTitre();?></h1>
 
-                <li id = "noteRec"> Note : <?php echo $Recette->getNote();echo 'MANQUE IMPLEMENTATION';?> </li> 
-                <li id = "typeRec">Type <?php echo $Recette->getType();?></li>
+               <li id = "typeRec">Type <?php echo $Recette->getType();?></li>
                 </br>
                 <li id="nbPrsRec">Nombre personnes : <?php echo $Recette->getNb_De_Personne();?>     </li>    
                 <li id="tempsRec">Temps préparation :<?php echo $Recette->getTemps();?></li>
@@ -50,7 +49,7 @@
                     Ingredients :</br>  
                     <?php
                         $Ingredients = $Recette->getIngredients();
-                        for($i = 0 ; $i < count($Ingredients) - 1; $i++){
+                        for($i = 0 ; $i < count($Ingredients) - 1; $i+=2){
                             
                             echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
                             

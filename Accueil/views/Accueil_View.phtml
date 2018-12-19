@@ -51,7 +51,7 @@
                 
                 echo 'Ingredients : </br>';
                 $Ingredients = $Recette1->getIngredients();
-                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i+=2){
                             
                     echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
                         
@@ -75,7 +75,7 @@
           
         <div class="Recette-petit center" >
            <a href="recette.php?numRecette=2&action=afficherCommentaires">
-               <img class="image-petit" src="Accueil/image-petit.jpg">
+               <img class="image-petit" src="Accueil/ratatouille-nicoise-facile.jpg">
            </a>
             <h3 class="title"><?php echo $Recette2->getTitre()?></h3>   
             <h4 class="Temps">Temps de preparation : <?php echo $Recette2->getTemps() ?></h4>
@@ -85,7 +85,7 @@
                 
                 echo 'Ingredients : </br>';
                 $Ingredients = $Recette2->getIngredients();
-                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i+=2){
                             
                     echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
                         
@@ -107,9 +107,8 @@
         
           
         <div class="Recette-petit center" >
-           <a href="recette.php?numRecette=1&action=afficherCommentaires">
-           <a href="recette.php?numRecette=1&action=afficherCommentaires">
-               <img class="image-petit" src="Accueil/image-petit.jpg">
+           <a href="recette.php?numRecette=1125&action=afficherCommentaires">
+               <img class="image-petit" src="Accueil/chocolat.jpg">
            </a>
             <h3 class="title"><?php echo $Recette3->getTitre()?></h3>   
             <h4 class="Temps">Temps de preparation : <?php echo $Recette3->getTemps() ?></h4>
@@ -119,7 +118,7 @@
                 
                 echo 'Ingredients : </br>';
                 $Ingredients = $Recette3->getIngredients();
-                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                for($i = 0 ; $i < (count($Ingredients)) - 1; $i+=2){
                             
                     echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
                         
@@ -141,8 +140,8 @@
         
           
         <div class="Recette-petit center" >
-           <a href="recette.php?numRecette=2&action=afficherCommentaires">
-               <img class="image-petit" src="Accueil/image-petit.jpg">
+           <a href="recette.php?numRecette=1126&action=afficherCommentaires">
+               <img class="image-petit" src="Accueil/terrine-de-foie-gras-maison.jpg">
            </a>
             <h3 class="title"><?php echo $Recette4->getTitre()?></h3>   
             <h4 class="Temps">Temps de preparation : <?php echo $Recette4->getTemps() ?></h4>
@@ -152,7 +151,7 @@
                 
                 echo 'Ingredients : </br>';
                 $Ingredients = $Recette4->getIngredients();
-                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                for($i = 0 ; $i < (count($Ingredients)) - 1; $i+=2){
                             
                     echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
                         
@@ -174,8 +173,8 @@
         
           
         <div class="Recette-petit center" >
-           <a href="recette.php?numRecette=1&action=afficherCommentaires">
-               <img class="image-petit" src="Accueil/image-petit.jpg">
+           <a href="recette.php?numRecette=1127&action=afficherCommentaires">
+               <img class="image-petit" src="Accueil/dinde.jpg">
            </a>
             <h3 class="title"><?php echo $Recette5->getTitre()?></h3>   
             <h4 class="Temps">Temps de preparation : <?php echo $Recette5->getTemps() ?></h4>
@@ -185,7 +184,7 @@
                 
                 echo 'Ingredients : </br>';
                 $Ingredients = $Recette5->getIngredients();
-                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                for($i = 0 ; $i < (count($Ingredients)); $i+=2){
                             
                     echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
                         
@@ -207,8 +206,8 @@
         
           
         <div class="Recette-petit center" >
-           <a href="recette.php?numRecette=2&action=afficherCommentaires">
-               <img class="image-petit" src="Accueil/image-petit.jpg">
+           <a href="recette.php?numRecette=1128&action=afficherCommentaires">
+               <img class="image-petit" src="Accueil/ballottine-de-volaille-au-foie-gras.jpg">
            </a>
             <h3 class="title"><?php echo $Recette6->getTitre()?></h3>   
             <h4 class="Temps">Temps de preparation : <?php echo $Recette6->getTemps() ?></h4>
@@ -218,7 +217,7 @@
                 
                 echo 'Ingredients : </br>';
                 $Ingredients = $Recette6->getIngredients();
-                for($i = 0 ; $i < (count($Ingredients)/2) - 1; $i++){
+                for($i = 0 ; $i < (count($Ingredients)); $i+=2){
                             
                     echo "- ".$Ingredients[$i+1] . " de ".$Ingredients[$i] . "</br>";
                         

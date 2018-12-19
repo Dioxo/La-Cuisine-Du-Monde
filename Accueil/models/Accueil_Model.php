@@ -13,10 +13,10 @@ class Accueil_Model
         require_once 'Objets/Recette.php';
         $this->Recette1 = $this->chercherRecette(1);
         $this->Recette2 = $this->chercherRecette(2);
-        $this->Recette3 = $this->chercherRecette(1);
-        $this->Recette4 = $this->chercherRecette(2);
-        $this->Recette5 = $this->chercherRecette(1);
-        $this->Recette6 = $this->chercherRecette(2);
+        $this->Recette3 = $this->chercherRecette(1125);
+        $this->Recette4 = $this->chercherRecette(1126);
+        $this->Recette5 = $this->chercherRecette(1127);
+        $this->Recette6 = $this->chercherRecette(1128);
     }
     public function chercherRecette($numRecette){
         $Recette = new Recette();
