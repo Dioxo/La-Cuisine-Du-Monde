@@ -109,9 +109,12 @@ class Requette{
                 alert('Nouvelle Recette Ajoutée');
                 </script>";
         } else {
+            echo $this->db->error;
             echo  "<script type='text/javascript'>
                 alert('Erreur, pas possible de creer la recette, essayez autre fois');
-                </script>";        }
+                </script>";    
+            
+        }
 
     }
     
