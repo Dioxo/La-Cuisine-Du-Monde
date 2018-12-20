@@ -21,7 +21,7 @@ class Commentaire_Controller{
     
     function ajouterCommentaire(){
         //si l'utilisateur est connecté, on ajoute le commentaire
-        if(isset($_COOKIE['NomUser'])){
+        if(isset($_COOKIE['NomUser']) and !empty($_COOKIE['NomUser']) and !empty($_POST['commentaire']) ){
             require_once('./Commentaire/Model/Commentaire_Model.php');
 
             $commentaire = $_POST['commentaire'];
@@ -30,6 +30,12 @@ class Commentaire_Controller{
             $this->model = new Commentaire_Model();
             $this->model->ajouterCommentaire($commentaire, $numRecette, $_COOKIE['NomUser']);
             
+        }else{
+            echo "<script>
+                
+                alert('Error, commentaire vide');
+                
+                </script>";
         }
     }
     

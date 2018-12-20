@@ -100,8 +100,8 @@ class Requette{
     public function ajouterRecette($Recette)
     {
         require_once('db/Db.php');        
-        $sql="INSERT INTO recette (Titre,Description,Temps,NbPersonne,Auteur) VALUES 
-            ('".$Recette->getTitre()."','".$Recette->getDescription()."','".$Recette->getTemps()."',".$Recette->getNb_De_Personne().",".$Recette->getAuteur().")";
+        $sql='INSERT INTO recette (Titre,Description,Temps,NbPersonne,Auteur) VALUES 
+            ("'.$Recette->getTitre().'","'.$Recette->getDescription().'","'.$Recette->getTemps().'",'.$Recette->getNb_De_Personne().','.$Recette->getAuteur().')';
         
 
         if ($this->db->query($sql)) {
