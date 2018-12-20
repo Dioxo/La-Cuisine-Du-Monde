@@ -10,7 +10,10 @@ class AjoutRecette_Controller{
     
     public function creerRecette(){
         $this->Recette = new Recette();
-        //if(isset($_POST['titre']) &&isset($_POST['typer']) &&isset($_POST['timer']) &&isset($_POST['nombrepersonne']) &&isset($_POST['descript'])){
+        if(isset($_POST['titre']) &&isset($_POST['typer']) &&isset($_POST['timer']) &&isset($_POST['nombrepersonne']) &&isset($_POST['descript']) &&
+          !empty($_POST['titre']) &&!empty($_POST['typer']) &&!empty($_POST['timer']) &&!empty($_POST['nombrepersonne']) &&!empty($_POST['descript'])
+          
+          ){
          
         $this->Recette->setTitre($_POST['titre']);
         $this->Recette->setType($_POST['typer']);
@@ -26,7 +29,15 @@ class AjoutRecette_Controller{
         
             
            
-        //}
+        }else{
+             echo "<script>
+                
+                alert('champs vides');
+                    document.location.replace('ajout.php?action=afficherAjoutRecette');
+
+                
+                </script>";
+        }
        // $_GET['bouton'];
     }
     

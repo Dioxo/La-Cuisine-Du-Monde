@@ -3,17 +3,33 @@
 class Modification_Controller{
     
     public function confirmerMDP(){
-       require_once("./Modification/Model/Modification_Model.php");
-        $model = new Modification_Model();
-        
-        //Si la mdp entré pas l'utilisateur est egal à celle de la BDD, on peux changer les mdp
-        if($model->confirmerMDP($_POST['LastMDP']) == 1){
-            $this->changerInfo();
+        if(  
+             !empty($_POST['LastMDP']) and
+             !empty($_POST['NewMdp']) and
+             !empty($_POST['confirmationNewMdp']) and
+             !empty($_POST['Email']) and
+             !empty($_POST['confirmationEmail']) 
+        ){
+           require_once("./Modification/Model/Modification_Model.php");
+            $model = new Modification_Model();
+
+            //Si la mdp entré pas l'utilisateur est egal à celle de la BDD, on peux changer les mdp
+            if($model->confirmerMDP($_POST['LastMDP']) == 1){
+                $this->changerInfo();
+            }else{
+                echo "<script>
+                alert('Mot De passe mauvaise');
+                document.location.replace('modifierInfo.php');
+                </script>";
+            }
         }else{
             echo "<script>
-            alert('Mot De passe mauvaise');
-            document.location.replace('modifierInfo.php');
-            </script>";
+                
+                alert('champs vides');
+                    document.location.replace('modifierInfo.php');
+
+                
+                </script>";
         }
     }
     

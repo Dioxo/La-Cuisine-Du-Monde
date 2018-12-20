@@ -21,7 +21,7 @@ class Commentaire_Controller{
     
     function ajouterCommentaire(){
         //si l'utilisateur est connecté, on ajoute le commentaire
-        if(isset($_COOKIE['NomUser']) and !empty($_COOKIE['NomUser']) and !empty($_POST['commentaire']) ){
+        if(isset($_COOKIE['NomUser']) and !empty($_POST['commentaire']) ){
             require_once('./Commentaire/Model/Commentaire_Model.php');
 
             $commentaire = $_POST['commentaire'];
@@ -31,11 +31,27 @@ class Commentaire_Controller{
             $this->model->ajouterCommentaire($commentaire, $numRecette, $_COOKIE['NomUser']);
             
         }else{
-            echo "<script>
+
+            if(empty($_POST['commentaire'])){
                 
+                echo "<script>
                 alert('Error, commentaire vide');
-                
                 </script>";
+            }
+            
+            if(!isset($_COOKIE['NomUser'])){
+                
+                echo "<script>
+                alert('Error, vous devez vous connectez pour continuer');
+                </script>";
+            }
+            
+            echo "<script>
+            document.location.replace('recette.php?numRecette=".$_GET['numRecette']."&action=afficherCommentaires');
+            </script>";
+            
+            
+            
         }
     }
     
