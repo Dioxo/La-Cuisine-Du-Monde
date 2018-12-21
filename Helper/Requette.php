@@ -318,7 +318,7 @@ class Requette{
     
     public function getRecherche($mot){
         $recettes = array() ;
-        $sql ="SELECT recette.numRecette, recette.Titre,recette.Description, x.Email, x.Pseudo FROM `recette` NATURAL JOIN (SELECT utilisateur.Email, utilisateur.numUser as Auteur, utilisateur.Pseudo FROM utilisateur)x WHERE `Titre` LIKE  '".$mot."%'UNION SELECT recette.numRecette, recette.Titre,recette.Description, utilisateur.Email, utilisateur.Pseudo FROM `recette` NATURAL JOIN utilisateur  WHERE `Pseudo` LIKE '".$mot."%'";
+        $sql ="SELECT recette.numRecette, recette.Titre,recette.Description, x.Email, x.Pseudo FROM `recette` NATURAL JOIN (SELECT utilisateur.Email, utilisateur.numUser as Auteur, utilisateur.Pseudo FROM utilisateur)x WHERE `Titre` LIKE  '%".$mot."%'UNION SELECT recette.numRecette, recette.Titre,recette.Description, utilisateur.Email, utilisateur.Pseudo FROM `recette` NATURAL JOIN utilisateur  WHERE `Pseudo` LIKE '%".$mot."%'";
             $result = $this->db->query($sql);
             if($result){
             while($row = $result->fetch_assoc()) {
