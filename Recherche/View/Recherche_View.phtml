@@ -41,7 +41,9 @@
                  }
                 
                 echo '<div id="rec">
-                    <li class = "TempsPreparation"> Titre :'.$Recette[$j]['Titre'].'  </li>
+                    <li class = "TempsPreparation">
+                            <a href="recette.php?numRecette='.$Recette[$j]['numRecette'].'&action=afficherCommentaires"> Titre :'.$Recette[$j]['Titre'].' </a>
+                    </li>
                     <li class = "Auteur"> Author :'.$Recette[$j]['Pseudo'].' </li>
                     <li class = "Titre"> MailUser : '.$Recette[$j]['Email'].' </li>
                     <li class = "Description"> Description : '.$description.' </li>
@@ -51,10 +53,9 @@
                  $description = "";
 
             }
-            
-            
-            
+
             ?>
+            
           <!--      
             <div id="rec">
                 <li class = "TempsPreparation"> Titre :  </li>
